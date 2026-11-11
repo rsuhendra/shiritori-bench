@@ -1,0 +1,125 @@
+/* A compact, rule-first opening screen. The five view tabs are the only nav. */
+.header-inner { height: 56px; }
+.header-caption { display: flex; align-items: center; gap: 9px; color: var(--muted); font-size: 9px; }
+.intro { padding-block: 28px 20px; }
+.intro-copy { text-align: center; }
+.intro-copy .eyebrow { justify-content: center; font-size: 9px; margin-bottom: 10px; color: var(--muted); }
+.intro-copy .eyebrow [lang=ja] { font-family: var(--sans); font-size: 14px; color: var(--accent); letter-spacing: 2px; }
+.intro h1 { font-size: clamp(32px, 3.7vw, 47px); line-height: 1.15; letter-spacing: -1.8px; margin-bottom: 12px; }
+.intro-copy > p:last-child { max-width: 880px; margin: 0 auto; font-size: 13px; line-height: 1.8; color: var(--muted); }
+.intro-copy > p:last-child strong { color: var(--ink); font-weight: 500; }
+.teaching-box { margin-top: 23px; border: 1px solid var(--line); border-radius: 5px; background: var(--white); padding: 16px 23px 13px; }
+.teaching-heading { display: flex; align-items: center; gap: 18px; margin-bottom: 15px; }
+.teaching-heading > .mono { font-size: 9px; color: var(--green); white-space: nowrap; }
+.teaching-heading p { margin: 0; font-size: 11px; color: var(--muted); }
+.teaching-heading .small-pill { margin-left: auto; font-size: 7px; white-space: nowrap; }
+.teaching-chain { list-style: none; padding: 0 0 15px; margin: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 58px; }
+.teaching-word { position: relative; border: 1px solid var(--line); background: var(--paper); border-radius: 4px; padding: 8px 10px 9px; text-align: center; min-width: 0; }
+.teaching-turn { display: block; font-family: var(--mono); font-size: 8px; letter-spacing: .6px; color: var(--muted); }
+.teaching-word > strong { display: block; font-family: var(--sans); font-size: 29px; font-weight: 500; line-height: 1.5; letter-spacing: 1px; margin-block: 3px; white-space: nowrap; }
+.joined-kana { color: #3f6043; background: #e1e8d7; border-bottom: 2px solid #81966c; padding: 0 2px; border-radius: 3px 3px 0 0; }
+.teaching-reading { font-family: var(--mono); font-size: 10px; color: var(--muted); display: block; white-space: nowrap; }
+.teaching-reading > span { font-family: var(--sans); font-size: 10px; }
+.teaching-join { position: absolute; left: calc(100% + 1px); width: 58px; top: 36px; color: var(--green); font-size: 15px; white-space: nowrap; }
+.teaching-join b { font-family: var(--sans); font-weight: 500; font-size: 12px; }
+.teaching-loss { border-color: #d0a193; background: #f7eee6; }
+.fatal-kana { color: var(--accent); background: #edcfc1; border-bottom: 2px solid var(--accent); padding: 0 2px; border-radius: 3px 3px 0 0; }
+.loss-caption { position: absolute; top: calc(100% + 3px); left: 0; right: 0; font-family: var(--mono); font-size: 7px; color: var(--accent); letter-spacing: .7px; white-space: nowrap; }
+.teaching-rules { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 9px 16px; border-top: 1px solid var(--line); padding-top: 11px; margin-top: 8px; font-size: 10px; color: var(--muted); }
+.teaching-rules > span { display: flex; align-items: center; gap: 7px; }
+.teaching-rules b { font-family: var(--mono); font-size: 8px; font-weight: 400; color: var(--green); }
+.teaching-rules .fatal-rule { color: var(--accent); }
+.teaching-rules .fatal-rule b { color: var(--accent); }
+.stats { padding-block: 13px; }
+.stats > div { display: grid; grid-template-columns: auto 1fr; column-gap: 12px; align-items: center; padding-left: 19px; }
+.stats strong, .stats strong[lang=ja] { grid-column: 1; grid-row: 1 / 3; font-size: 28px; line-height: 1.4; }
+.stats strong[lang=ja] { font-size: 25px; }
+.stats .stat-label { grid-column: 2; grid-row: 1; font-size: 8px; letter-spacing: .6px; align-self: end; }
+.stats > div > span:last-child { grid-column: 2; grid-row: 2; align-self: start; font-size: 9px; }
+.view-nav-wrap { top: 56px; scroll-margin-top: 56px; margin-top: 8px; }
+.view-nav { padding-block: 11px; }
+.view-tab { border-color: var(--line); background: #eeeee5; }
+.view-tab.active { border-color: var(--ink); }
+[data-view-panel] { scroll-margin-top: 150px; }
+[data-view-panel].section, [data-view-panel] > .section { padding-top: 39px; }
+@media (max-width: 1050px) {
+  .teaching-chain { gap: 38px; }
+  .teaching-join { width: 38px; }
+  .teaching-rules { font-size: 9px; gap: 8px 12px; }
+  .stats > div { padding-left: 13px; column-gap: 9px; }
+  .stats strong { font-size: 25px; }
+  .stats .stat-label { font-size: 7px; }
+  .stats > div > span:last-child { font-size: 8px; }
+}
+@media (max-width: 760px) {
+  .header-inner { height: 52px; }
+  .header-caption { font-size: 8px; letter-spacing: .7px; }
+  .intro { padding-block: 22px 16px; }
+  .intro h1 { font-size: 36px; letter-spacing: -1px; }
+  .intro-copy > p:last-child { font-size: 12px; line-height: 1.7; }
+  .intro-break { display: none; }
+  .teaching-box { margin-top: 18px; padding: 13px 15px; }
+  .teaching-heading { gap: 10px; margin-bottom: 13px; }
+  .teaching-heading > .mono { font-size: 8px; }
+  .teaching-heading p { font-size: 10px; }
+  .teaching-heading .small-pill { display: none; }
+  .teaching-chain { gap: 24px; }
+  .teaching-word { padding: 7px 3px; }
+  .teaching-word > strong { font-size: 24px; letter-spacing: 0; }
+  .teaching-join { width: 24px; font-size: 13px; top: 33px; }
+  .teaching-join b { display: none; }
+  .teaching-turn { font-size: 7px; letter-spacing: .2px; }
+  .teaching-reading { font-size: 9px; }
+  .teaching-reading > span { display: block; font-size: 9px; }
+  .teaching-reading > span::first-letter { font-size: 0; }
+  .teaching-rules { font-size: 10px; gap: 7px 14px; }
+  .teaching-rules .fatal-rule { flex-basis: 100%; }
+  .stats { gap: 10px 0; padding-block: 10px; }
+  .stats strong { font-size: 25px; }
+  .stats .stat-label { font-size: 8px; }
+  .stats > div > span:last-child { font-size: 8px; }
+  .view-nav-wrap { top: 52px; scroll-margin-top: 52px; margin-top: 5px; }
+  .view-nav { padding-block: 8px; }
+  .view-tab { min-width: 0; flex: 1 1 0; flex-direction: column; padding: 10px 4px; gap: 5px; text-align: center; }
+  .view-tab strong { font-size: 10px; white-space: normal; line-height: 1.3; }
+  .view-tab small { display: none; }
+  .view-tab svg { width: 20px; height: 20px; }
+  [data-view-panel] { scroll-margin-top: 140px; }
+  [data-view-panel].section, [data-view-panel] > .section { padding-top: 29px; }
+}
+.baseline-card { margin-top: 36px; border: 1px solid var(--line); padding: 28px; background: var(--bg, #f5f3ec); }
+.baseline-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 25px; }
+.baseline-heading h3 { font-family: var(--serif); font-size: 30px; line-height: 1.2; margin: 8px 0 0; }
+.baseline-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 25px 40px; }
+.baseline-grid article > span { color: var(--accent); font-size: 9px; }
+.baseline-grid h4 { font-size: 14px; margin: 9px 0; }
+.baseline-grid p, .baseline-note { font-size: 12px; line-height: 1.8; color: var(--muted); margin: 0; }
+.baseline-note { margin-top: 20px; }
+@media (max-width: 760px) {
+  .baseline-card { padding: 20px; }
+  .baseline-heading { align-items: flex-start; flex-direction: column; gap: 12px; }
+  .baseline-heading h3 { font-size: 27px; }
+  .baseline-grid { grid-template-columns: 1fr; gap: 22px; }
+}
+@media (max-width: 430px) {
+  .header-caption { font-size: 7px; }
+  .intro-copy .eyebrow { font-size: 7px; gap: 6px; }
+  .intro-copy .eyebrow [lang=ja] { font-size: 12px; }
+  .intro h1 { font-size: 31px; }
+  .intro-copy > p:last-child { font-size: 11px; }
+  .teaching-heading { gap: 8px; }
+  .teaching-heading p { font-size: 9px; }
+  .teaching-chain { gap: 15px; }
+  .teaching-word > strong { font-size: 20px; }
+  .joined-kana, .fatal-kana { padding-inline: 1px; }
+  .teaching-turn { font-size: 6px; }
+  .teaching-join { width: 15px; top: 29px; font-size: 11px; }
+  .teaching-reading, .teaching-reading > span { font-size: 8px; }
+  .loss-caption { font-size: 5px; letter-spacing: .2px; }
+  .teaching-rules { font-size: 9px; flex-direction: column; gap: 6px; }
+  .teaching-rules > span { gap: 6px; }
+  .stats > div { column-gap: 8px; }
+  .stats strong { font-size: 22px; }
+  .stats .stat-label { font-size: 7px; letter-spacing: .3px; }
+  .view-tab strong { font-size: 9px; }
+}

@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.db
+data/raw/*.gz
+data/raw/*.zip
+data/raw/*.xz
+data/raw/*.part
+data/processed/*.sqlite
+.env
+.env.*
+!.env.example
+.venv/
+results/raw/
+results/
+data/processed/archive/
+
