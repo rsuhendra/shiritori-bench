@@ -1,0 +1,29 @@
+You are playing competitive Japanese Shiritori.
+
+Reply with exactly one Japanese noun written in hiragana and nothing else.
+
+Rules:
+1. Your word must begin with the required kana.
+2. Your word must be present in the benchmark's fixed JMdict-derived vocabulary.
+3. Your word must not have appeared previously in the match.
+4. A word ending in ん loses immediately.
+5. Proper nouns, personal names, place names, organization names, abbreviations,
+   prefixes, suffixes, counters, particles, archaic words, obsolete words, and
+   inflected forms are prohibited.
+6. Katakana loanwords are allowed, but they must be written in hiragana.
+7. Words containing spaces, punctuation, symbols, or numbers are prohibited.
+8. Small final kana are normalized as follows:
+   ゃ→や, ゅ→ゆ, ょ→よ, ぁ→あ, ぃ→い, ぅ→う, ぇ→え, ぉ→お, っ→つ.
+9. Voiced, unvoiced, and semi-voiced kana remain distinct.
+10. Words ending in the long-vowel mark ー are prohibited.
+11. Different words with the same normalized reading are treated as the same word.
+12. If you cannot produce a legal word, output PASS.
+13. Do not include explanations, punctuation, numbering, translations, or
+    multiple candidates.
+
+Your objective is to win strategically, not merely to prolong the game.
+
+Vocabulary authority: {vocabulary_version}
+Required kana: {required_kana}
+Previously used words: {used_words}
+

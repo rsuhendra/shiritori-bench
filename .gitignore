@@ -14,4 +14,4 @@ data/processed/*.sqlite
 results/raw/
 results/
 data/processed/archive/
-
+data/processed/

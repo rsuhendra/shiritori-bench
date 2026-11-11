@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "vocabulary_version": "jmdict-2026-10-13-noun-v3",
+  "opening_kana": ["か", "さ", "た", "な", "は"],
+  "repetitions": 2,
+  "turn_limit": 100,
+  "search_nodes": 10000,
+  "include_algorithmic_players": ["greedy", "search"]
+}

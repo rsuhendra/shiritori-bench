@@ -1,0 +1,19 @@
+{
+  "vocabulary_version": "jmdict-2026-10-13-noun-v3",
+  "openings": ["か"],
+  "turn_limit": 100,
+  "players": [
+    {
+      "id": "flash-thinking", "label": "DeepSeek Flash — thinking low",
+      "provider": "deepseek", "model": "deepseek-flash",
+      "thinking": true, "temperature": 0,
+      "max_completion_tokens": 16384, "reasoning_effort": "low"
+    },
+    {
+      "id": "memory-current", "label": "MemoryBot — current",
+      "provider": "bot", "model": "memory", "seed": 17,
+      "alpha": 1, "threshold": 1, "frequency_policy": "unambiguous",
+      "recent": 12, "half_life": 40, "floor": 0.2
+    }
+  ]
+}

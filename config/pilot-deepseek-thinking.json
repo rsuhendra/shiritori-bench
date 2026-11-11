@@ -1,0 +1,27 @@
+{
+  "vocabulary_version": "jmdict-2026-10-13-noun-v3",
+  "openings": ["か", "さ", "ぬ", "る", "ぱ"],
+  "turn_limit": 60,
+  "players": [
+    {
+      "id": "flash-thinking-a",
+      "label": "DeepSeek Flash — thinking A",
+      "provider": "deepseek",
+      "model": "deepseek-flash",
+      "thinking": true,
+      "temperature": 0,
+      "max_completion_tokens": 16384,
+      "reasoning_effort": "low"
+    },
+    {
+      "id": "flash-thinking-b",
+      "label": "DeepSeek Flash — thinking B",
+      "provider": "deepseek",
+      "model": "deepseek-flash",
+      "thinking": true,
+      "temperature": 0,
+      "max_completion_tokens": 16384,
+      "reasoning_effort": "low"
+    }
+  ]
+}
