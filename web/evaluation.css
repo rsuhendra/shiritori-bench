@@ -1,0 +1,32 @@
+.evaluation-context { display:flex; align-items:center; flex-wrap:wrap; gap:16px 25px; padding-top:22px; scroll-margin-top:160px; }
+.evaluation-context label { font-size:11px; color:var(--muted); display:flex; gap:10px; align-items:center; }
+.evaluation-context select { max-width:280px; border:1px solid var(--line); border-radius:5px; padding:8px; background:var(--white); color:var(--ink); font:inherit; }
+.evaluation-context > p { flex-basis:100%; font-size:11px; color:var(--muted); margin:0; }
+.score-guide { margin-top:25px; border:1px solid var(--line); padding:22px; display:grid; grid-template-columns:1fr 1fr; gap:20px 35px; }
+.score-guide h3 { font-size:14px; margin-bottom:9px; }
+.score-guide p { color:var(--muted); font-size:12px; line-height:1.8; margin:0; }
+.score-guide > p { grid-column:1/-1; border-top:1px solid var(--line); padding-top:14px; }
+.score-guide a { text-decoration:underline; }
+.model-table { min-width:1030px; }
+.model-table td { vertical-align:top; }
+.model-table .cell-detail { max-width:180px; white-space:normal; }
+.move-row, .moves-label { grid-template-columns:65px minmax(100px,.7fr) minmax(140px,1.2fr) minmax(130px,.8fr); }
+.move-strength { font-size:10px; line-height:1.7; color:var(--muted); min-width:0; }
+.move-strength summary { cursor:pointer; }
+.move-strength summary strong { display:block; color:var(--ink); font-weight:600; }
+.move-strength summary span { display:block; }
+.move-strength p { margin:8px 0; font-size:10px; }
+.policy-flag { color:#954a2d; font-size:11px; line-height:1.7; }
+.game-option .policy-flag { display:block; margin-top:8px; font-size:9px; }
+[hidden] { display:none !important; }
+@media(max-width:760px) {
+  .evaluation-context { padding-top:16px; gap:12px; }
+  .evaluation-context .segmented { width:100%; display:flex; }
+  .evaluation-context .segmented button { flex:1; padding:10px 5px; }
+  .evaluation-context label { flex-wrap:wrap; }
+  .score-guide { grid-template-columns:1fr; padding:18px; }
+  .move-row,.moves-label { grid-template-columns:45px minmax(75px,.65fr) minmax(100px,1fr); gap:8px; }
+  .move-strength { grid-column:2/-1; border-top:1px dotted var(--line); padding-top:6px; }
+  .moves-label span:last-child { display:none; }
+  .game-list { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}

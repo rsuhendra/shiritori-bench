@@ -12,11 +12,15 @@ import statistics
 from .transcript import ending_description, english_meaning, romanize
 
 
-def configuration(turn):
+def configuration(turn, player=None):
     metadata = turn.get("metadata", {})
     request = metadata.get("request", {})
+    kind = (player or {}).get('kind', 'llm')
+    bot_settings = tuple(metadata.get(k) for k in ('profile','alpha','attempt_limit',
+        'recent_moves','recognition_half_life','recognition_floor')) if kind != 'llm' else ()
     return (metadata.get("model", turn["player_name"]),
-            request.get("thinking"), request.get("reasoning_effort"))
+            request.get("thinking"), request.get("reasoning_effort"),
+            request.get('max_completion_tokens'), request.get('temperature'), kind, bot_settings)
 
 
 def build_public_payload(records, frequency_index, analysis, diagnostics, *, glossary=english_meaning):
@@ -29,14 +33,15 @@ def build_public_payload(records, frequency_index, analysis, diagnostics, *, glo
         player_ids = []
         for player_index, player in enumerate(match["players"]):
             observed = next((t for t in match["turns"] if t["player_index"] == player_index), None)
-            key = configuration(observed) if observed else (player["name"], None, None)
+            key = configuration(observed, player) if observed else (player["name"], None, None, None, None, player.get('kind','llm'), ())
             if key not in configurations:
                 identifier = f"configuration-{len(configurations) + 1}"
                 configurations[key] = identifier
                 models[identifier] = {"id": identifier, "model": key[0], "name": "DeepSeek Flash"
                     if "deepseek" in str(key[0]).lower() else key[0],
                     "thinking": key[1], "reasoning_effort": key[2],
-                    "mode": f"Thinking · {key[2] or 'default'}" if key[1] else "Non-thinking" if key[1] is False else "Unspecified",
+                    "kind": key[5], "max_completion_tokens": key[3],
+                    "mode": ('Baseline' if key[5] != 'llm' else f"Thinking · {key[2] or 'default'}" if key[1] else "Non-thinking" if key[1] is False else "Unspecified"),
                     "appearances": 0, "wins": 0, "losses": 0,
                     "submissions": 0, "valid_moves": 0, "completion_tokens": 0,
                     "failure_counts": {}, "latencies": []}
@@ -74,6 +79,8 @@ def build_public_payload(records, frequency_index, analysis, diagnostics, *, glo
             completion_tokens += count
         games.append({"id": match["match_id"], "date": match["started_at"],
             "opening": match["opening_kana"], "players": player_ids,
+            "vocabulary_version": match['vocabulary_version'],
+            "unfinished": match['outcome'] == 'TURN_LIMIT_DRAW',
             "player_labels": [p["name"] for p in match["players"]],
             "same_configuration": player_ids[0] == player_ids[1],
             "winner_index": match.get("winner_index"), "ending": match["ending"],
@@ -86,7 +93,8 @@ def build_public_payload(records, frequency_index, analysis, diagnostics, *, glo
         if p["threshold"] == analysis["settings"]["threshold"] and p["transform"] == "log"), None)
     return {"schema_version": 2, "generated_at": datetime.now(timezone.utc).isoformat(),
         "is_sample_data": False,
-        "summary": {"configurations": len(models), "completed_games": len(games),
+        "summary": {"configurations": len(models), "completed_games": sum(not g['unfinished'] for g in games),
+            "unfinished_games":sum(g['unfinished'] for g in games),
             "excluded_games": len(excluded), "valid_moves": accepted, "submissions": submissions,
             "validity": accepted / submissions if submissions else None,
             "completion_tokens": completion_tokens,
@@ -95,7 +103,8 @@ def build_public_payload(records, frequency_index, analysis, diagnostics, *, glo
             "last_match_at": max((m["started_at"] for m in competitive), default=None)},
         "models": list(models.values()), "games": games,
         "failures": dict(failures),
-        "excluded": [{"id": m["match_id"], "reason": ending_description(m)} for m in excluded],
+        "excluded": [{"id": m["match_id"], "reason": ending_description(m)
+            if m['ending'].startswith('GENERATION_ERROR:') else 'Player/provider infrastructure failure; excluded from competitive outcomes.'} for m in excluded],
         "atlas": {"threshold": analysis.get("settings", {}).get("threshold"),
             "alpha": analysis.get("settings", {}).get("alpha"),
             "gammas": analysis.get("settings", {}).get("gammas", []),

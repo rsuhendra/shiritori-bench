@@ -24,8 +24,48 @@ This uses an explicit allowlist. It exports final words, dictionary meanings,
 frequency estimates, outcomes, aggregate usage and analysis diagnostics, but
 **not** private reasoning, raw API responses, prompts, request bodies or keys.
 It validates matching vocabulary hashes and rejects duplicate match IDs.
-Do not use the older `export_results.py` to overwrite this site's v2 payload;
+Do not use the older `export_results.py` to overwrite this site's v3 payload;
 that script belongs to the previous leaderboard skeleton.
+
+### Competition views and move strength
+
+Results, Explorer, and Failures share a competition selector (model vs MemoryBot
+or model vs model) and a referee-version selector. Statistics are never pooled
+across those groups. Same-configuration self-play contributes move/length
+observations, not comparative wins. Capped games are unfinished, not ties;
+interrupted runs contribute no competitive outcomes, validity, or scores.
+Win/loss-specific lengths exclude self-play and capped games. Wilson intervals
+are descriptive only: swapped-seat/seed observations are not independent trials.
+
+The main score is two-ply balance, with reply pressure alongside it:
+
+`pressure = -log1p(opponent mass)`
+
+`balance = pressure + 0.85 * E[log1p(own next-turn mass)]`
+
+Both remove previously played words, the candidate, and (for next-turn mass)
+the sampled opponent reply. Safe replies are frequency-weighted, not adversarial.
+Scores are midrank percentiles among supported, unused safe dictionary
+alternatives at that position. Invalid moves are unscored. Missing destination
+or continuation support yields unavailable scores, not zero-mass traps. Means
+exclude unavailable scores and show scored-valid-move coverage. These remain
+heuristics, not calibrated winning probabilities.
+
+`site_evaluation.py` computes scores offline using one fixed noun-v3/TUBELEX
+graph across both competitions, including historical noun-v2 games. This is
+explicit post-hoc move analysis, not a change to historical referee decisions.
+The known noun-v2 まくら exclusion is flagged in the results and transcript.
+Scoring definitions, source hashes, threshold, and discount are in the public
+snapshot. The previous frozen-graph discount analysis is archived separately in
+`web/data/research.json` and remains accessible through Analysis.
+
+The exporter reuses that checked-in research snapshot by default. To replace it,
+provide both `--analysis` and `--diagnostics` with hashes matching the local
+frequency dictionary. Raw pilot logs remain local and ignored by Git.
+
+Optional browser smoke test (existing Playwright and installed Chrome required):
+`node scripts/check_site.cjs http://127.0.0.1:8856/`. It does not install packages
+or browsers. `PLAYWRIGHT_MODULE` can select an existing Playwright installation.
 
 Preview from the project directory:
 

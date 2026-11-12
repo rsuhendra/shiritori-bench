@@ -1,20 +1,21 @@
 {
-  "schema_version": 2,
-  "generated_at": "2026-10-16T22:21:58.993343+00:00",
+  "schema_version": 3,
+  "generated_at": "2026-11-12T01:15:35.113367+00:00",
   "is_sample_data": false,
   "summary": {
-    "configurations": 2,
-    "completed_games": 4,
-    "excluded_games": 1,
-    "valid_moves": 45,
-    "submissions": 49,
-    "validity": 0.9183673469387755,
-    "completion_tokens": 203777,
+    "configurations": 3,
+    "completed_games": 8,
+    "unfinished_games": 0,
+    "excluded_games": 2,
+    "valid_moves": 115,
+    "submissions": 123,
+    "validity": 0.9349593495934959,
+    "completion_tokens": 243477,
     "openings": [
       "か"
     ],
     "vocabulary_version": "jmdict-2026-10-13-noun-v2",
-    "last_match_at": "2026-10-16T05:23:29.930017+00:00"
+    "last_match_at": "2026-10-29T00:30:28.880957+00:00"
   },
   "models": [
     {
@@ -23,18 +24,20 @@
       "name": "DeepSeek Flash",
       "thinking": false,
       "reasoning_effort": null,
+      "kind": "llm",
+      "max_completion_tokens": 4096,
       "mode": "Non-thinking",
-      "appearances": 2,
+      "appearances": 4,
       "wins": 0,
-      "losses": 2,
-      "submissions": 6,
-      "valid_moves": 4,
-      "completion_tokens": 17,
+      "losses": 4,
+      "submissions": 13,
+      "valid_moves": 9,
+      "completion_tokens": 41,
       "failure_counts": {
-        "ENDS_IN_N": 2
+        "ENDS_IN_N": 4
       },
-      "validity": 0.6666666666666666,
-      "median_latency_seconds": 1.0401810419989488
+      "validity": 0.6923076923076923,
+      "median_latency_seconds": 2.41858608397888
     },
     {
       "id": "configuration-2",
@@ -42,18 +45,39 @@
       "name": "DeepSeek Flash",
       "thinking": true,
       "reasoning_effort": "low",
+      "kind": "llm",
+      "max_completion_tokens": 16384,
       "mode": "Thinking · low",
-      "appearances": 6,
+      "appearances": 8,
       "wins": 4,
-      "losses": 2,
-      "submissions": 43,
-      "valid_moves": 41,
-      "completion_tokens": 203760,
+      "losses": 4,
+      "submissions": 74,
+      "valid_moves": 70,
+      "completion_tokens": 243436,
       "failure_counts": {
-        "INVALID_WORD": 2
+        "INVALID_WORD": 4
       },
-      "validity": 0.9534883720930233,
-      "median_latency_seconds": 27.80363054099871
+      "validity": 0.9459459459459459,
+      "median_latency_seconds": 15.864511249990755
+    },
+    {
+      "id": "configuration-3",
+      "model": "MemoryBot — current",
+      "name": "MemoryBot — current",
+      "thinking": null,
+      "reasoning_effort": null,
+      "kind": "algorithmic",
+      "max_completion_tokens": null,
+      "mode": "Baseline",
+      "appearances": 4,
+      "wins": 4,
+      "losses": 0,
+      "submissions": 36,
+      "valid_moves": 36,
+      "completion_tokens": 0,
+      "failure_counts": {},
+      "validity": 1.0,
+      "median_latency_seconds": null
     }
   ],
   "games": [
@@ -65,6 +89,8 @@
         "configuration-1",
         "configuration-2"
       ],
+      "vocabulary_version": "jmdict-2026-10-13-noun-v2",
+      "unfinished": false,
       "player_labels": [
         "DeepSeek Flash — non-thinking",
         "DeepSeek Flash — thinking low"
@@ -88,7 +114,19 @@
             "upper": 18.055001464407663
           },
           "completion_tokens": 2,
-          "latency_seconds": 1.123592459000065
+          "latency_seconds": 1.123592459000065,
+          "strength": {
+            "reply_pressure": -7.992725117402105,
+            "two_ply": -2.1651854074898633,
+            "opponent_mass": 2958.350558704668,
+            "safe_replies": 3595,
+            "unavailable_reason": null,
+            "legal_alternatives": 7155,
+            "reply_pressure_percentile": 20.11044317069761,
+            "reply_pressure_alternatives": 7153,
+            "two_ply_percentile": 11.12120788480358,
+            "two_ply_alternatives": 7153
+          }
         },
         {
           "turn": 2,
@@ -104,7 +142,19 @@
             "upper": 23.635419139988937
           },
           "completion_tokens": 10362,
-          "latency_seconds": 64.95474345800176
+          "latency_seconds": 64.95474345800176,
+          "strength": {
+            "reply_pressure": -5.288368445080788,
+            "two_ply": 0.2928175278991869,
+            "opponent_mass": 197.0200810667155,
+            "safe_replies": 332,
+            "unavailable_reason": null,
+            "legal_alternatives": 3595,
+            "reply_pressure_percentile": 97.69123783031989,
+            "reply_pressure_alternatives": 3595,
+            "two_ply_percentile": 97.41307371349096,
+            "two_ply_alternatives": 3595
+          }
         },
         {
           "turn": 3,
@@ -120,7 +170,19 @@
             "upper": 5.592470413541492
           },
           "completion_tokens": 2,
-          "latency_seconds": 0.9516629159988952
+          "latency_seconds": 0.9516629159988952,
+          "strength": {
+            "reply_pressure": -7.751867881318141,
+            "two_ply": -1.5585758508802945,
+            "opponent_mass": 2324.9128888363925,
+            "safe_replies": 2918,
+            "unavailable_reason": null,
+            "legal_alternatives": 332,
+            "reply_pressure_percentile": 31.47590361445783,
+            "reply_pressure_alternatives": 332,
+            "two_ply_percentile": 31.174698795180724,
+            "two_ply_alternatives": 332
+          }
         },
         {
           "turn": 4,
@@ -136,7 +198,19 @@
             "upper": 11.775524987133702
           },
           "completion_tokens": 2394,
-          "latency_seconds": 17.805914708002092
+          "latency_seconds": 17.805914708002092,
+          "strength": {
+            "reply_pressure": -6.39053635021517,
+            "two_ply": -0.5493164167211075,
+            "opponent_mass": 595.1762532135613,
+            "safe_replies": 808,
+            "unavailable_reason": null,
+            "legal_alternatives": 2918,
+            "reply_pressure_percentile": 79.77335164835165,
+            "reply_pressure_alternatives": 2912,
+            "two_ply_percentile": 70.99931318681318,
+            "two_ply_alternatives": 2912
+          }
         },
         {
           "turn": 5,
@@ -152,9 +226,13 @@
             "upper": 0.4158194596275463
           },
           "completion_tokens": 4,
-          "latency_seconds": 1.3473057500013965
+          "latency_seconds": 1.3473057500013965,
+          "strength": null
         }
-      ]
+      ],
+      "competition": "model-model",
+      "valid_words": 4,
+      "policy_warning": null
     },
     {
       "id": "20261016T045736Z-94b79bb4-001",
@@ -164,6 +242,8 @@
         "configuration-2",
         "configuration-1"
       ],
+      "vocabulary_version": "jmdict-2026-10-13-noun-v2",
+      "unfinished": false,
       "player_labels": [
         "DeepSeek Flash — thinking low",
         "DeepSeek Flash — non-thinking"
@@ -187,7 +267,19 @@
             "upper": 7.285880096952224
           },
           "completion_tokens": 7395,
-          "latency_seconds": 50.18530162499883
+          "latency_seconds": 50.18530162499883,
+          "strength": {
+            "reply_pressure": -6.598639447483371,
+            "two_ply": -0.4094284314379255,
+            "opponent_mass": 733.0957336923442,
+            "safe_replies": 887,
+            "unavailable_reason": null,
+            "legal_alternatives": 7155,
+            "reply_pressure_percentile": 81.81881727946316,
+            "reply_pressure_alternatives": 7153,
+            "two_ply_percentile": 86.67691877533902,
+            "two_ply_alternatives": 7153
+          }
         },
         {
           "turn": 2,
@@ -203,7 +295,19 @@
             "upper": 36.14013477371587
           },
           "completion_tokens": 4,
-          "latency_seconds": 0.9567696249978326
+          "latency_seconds": 0.9567696249978326,
+          "strength": {
+            "reply_pressure": -7.411194058922228,
+            "two_ply": -1.4641925694642053,
+            "opponent_mass": 1653.400619751786,
+            "safe_replies": 1388,
+            "unavailable_reason": null,
+            "legal_alternatives": 887,
+            "reply_pressure_percentile": 44.18735891647856,
+            "reply_pressure_alternatives": 886,
+            "two_ply_percentile": 42.15575620767494,
+            "two_ply_alternatives": 886
+          }
         },
         {
           "turn": 3,
@@ -219,7 +323,19 @@
             "upper": 59.93826587616776
           },
           "completion_tokens": 4002,
-          "latency_seconds": 27.653111374998844
+          "latency_seconds": 27.653111374998844,
+          "strength": {
+            "reply_pressure": -5.288368445080788,
+            "two_ply": 0.2928175278991869,
+            "opponent_mass": 197.0200810667155,
+            "safe_replies": 332,
+            "unavailable_reason": null,
+            "legal_alternatives": 1388,
+            "reply_pressure_percentile": 98.19884726224784,
+            "reply_pressure_alternatives": 1388,
+            "two_ply_percentile": 97.87463976945244,
+            "two_ply_alternatives": 1388
+          }
         },
         {
           "turn": 4,
@@ -235,7 +351,19 @@
             "upper": 5.592470413541492
           },
           "completion_tokens": 2,
-          "latency_seconds": 1.4736593749985332
+          "latency_seconds": 1.4736593749985332,
+          "strength": {
+            "reply_pressure": -7.751867881318141,
+            "two_ply": -1.5589623746179262,
+            "opponent_mass": 2324.9128888363925,
+            "safe_replies": 2918,
+            "unavailable_reason": null,
+            "legal_alternatives": 332,
+            "reply_pressure_percentile": 31.47590361445783,
+            "reply_pressure_alternatives": 332,
+            "two_ply_percentile": 31.174698795180724,
+            "two_ply_alternatives": 332
+          }
         },
         {
           "turn": 5,
@@ -251,7 +379,19 @@
             "upper": 13.565356574226184
           },
           "completion_tokens": 3392,
-          "latency_seconds": 24.33089354200274
+          "latency_seconds": 24.33089354200274,
+          "strength": {
+            "reply_pressure": -3.8455054636808006,
+            "two_ply": 1.9920586486772276,
+            "opponent_mass": 45.78232514189086,
+            "safe_replies": 187,
+            "unavailable_reason": null,
+            "legal_alternatives": 2918,
+            "reply_pressure_percentile": 99.24450549450549,
+            "reply_pressure_alternatives": 2912,
+            "two_ply_percentile": 99.24450549450549,
+            "two_ply_alternatives": 2912
+          }
         },
         {
           "turn": 6,
@@ -267,9 +407,13 @@
             "upper": 7.22561640715113
           },
           "completion_tokens": 3,
-          "latency_seconds": 0.9314660419986467
+          "latency_seconds": 0.9314660419986467,
+          "strength": null
         }
-      ]
+      ],
+      "competition": "model-model",
+      "valid_words": 5,
+      "policy_warning": null
     },
     {
       "id": "20261016T050924Z-3b7e8dee-000",
@@ -279,6 +423,8 @@
         "configuration-2",
         "configuration-2"
       ],
+      "vocabulary_version": "jmdict-2026-10-13-noun-v2",
+      "unfinished": false,
       "player_labels": [
         "DeepSeek Flash — thinking A",
         "DeepSeek Flash — thinking B"
@@ -302,7 +448,19 @@
             "upper": 7.285880096952224
           },
           "completion_tokens": 1679,
-          "latency_seconds": 12.948639374997583
+          "latency_seconds": 12.948639374997583,
+          "strength": {
+            "reply_pressure": -6.598639447483371,
+            "two_ply": -0.4094284314379255,
+            "opponent_mass": 733.0957336923442,
+            "safe_replies": 887,
+            "unavailable_reason": null,
+            "legal_alternatives": 7155,
+            "reply_pressure_percentile": 81.81881727946316,
+            "reply_pressure_alternatives": 7153,
+            "two_ply_percentile": 86.67691877533902,
+            "two_ply_alternatives": 7153
+          }
         },
         {
           "turn": 2,
@@ -318,7 +476,19 @@
             "upper": 3.3386084149805892
           },
           "completion_tokens": 578,
-          "latency_seconds": 5.248473666000791
+          "latency_seconds": 5.248473666000791,
+          "strength": {
+            "reply_pressure": -7.455382735582452,
+            "two_ply": -1.186772063099463,
+            "opponent_mass": 1728.1456742120824,
+            "safe_replies": 2533,
+            "unavailable_reason": null,
+            "legal_alternatives": 887,
+            "reply_pressure_percentile": 42.60722347629797,
+            "reply_pressure_alternatives": 886,
+            "two_ply_percentile": 53.55530474040632,
+            "two_ply_alternatives": 886
+          }
         },
         {
           "turn": 3,
@@ -334,7 +504,19 @@
             "upper": 50.404550149634744
           },
           "completion_tokens": 2026,
-          "latency_seconds": 15.230645083000127
+          "latency_seconds": 15.230645083000127,
+          "strength": {
+            "reply_pressure": -6.39053635021517,
+            "two_ply": -0.5467006205065781,
+            "opponent_mass": 595.1762532135613,
+            "safe_replies": 808,
+            "unavailable_reason": null,
+            "legal_alternatives": 2533,
+            "reply_pressure_percentile": 82.8266877220687,
+            "reply_pressure_alternatives": 2533,
+            "two_ply_percentile": 74.27951046190289,
+            "two_ply_alternatives": 2533
+          }
         },
         {
           "turn": 4,
@@ -350,7 +532,19 @@
             "upper": 13.728068536689136
           },
           "completion_tokens": 2915,
-          "latency_seconds": 21.68419570900005
+          "latency_seconds": 21.68419570900005,
+          "strength": {
+            "reply_pressure": -5.866161317220807,
+            "two_ply": 0.12149911314326545,
+            "opponent_mass": 351.8917374865461,
+            "safe_replies": 898,
+            "unavailable_reason": null,
+            "legal_alternatives": 808,
+            "reply_pressure_percentile": 85.06815365551425,
+            "reply_pressure_alternatives": 807,
+            "two_ply_percentile": 77.13754646840148,
+            "two_ply_alternatives": 807
+          }
         },
         {
           "turn": 5,
@@ -366,7 +560,19 @@
             "upper": 0.024105475920437467
           },
           "completion_tokens": 5330,
-          "latency_seconds": 40.501550332999614
+          "latency_seconds": 40.501550332999614,
+          "strength": {
+            "reply_pressure": -6.367240228138846,
+            "two_ply": -0.5032298117695566,
+            "opponent_mass": 581.4481846768721,
+            "safe_replies": 807,
+            "unavailable_reason": null,
+            "legal_alternatives": 898,
+            "reply_pressure_percentile": 82.3463687150838,
+            "reply_pressure_alternatives": 895,
+            "two_ply_percentile": 76.36871508379889,
+            "two_ply_alternatives": 895
+          }
         },
         {
           "turn": 6,
@@ -382,7 +588,19 @@
             "upper": 0.7171379086330146
           },
           "completion_tokens": 6512,
-          "latency_seconds": 50.880198499999096
+          "latency_seconds": 50.880198499999096,
+          "strength": {
+            "reply_pressure": -6.367240228138846,
+            "two_ply": -0.5032298117695566,
+            "opponent_mass": 581.4481846768721,
+            "safe_replies": 806,
+            "unavailable_reason": null,
+            "legal_alternatives": 807,
+            "reply_pressure_percentile": 74.0074441687345,
+            "reply_pressure_alternatives": 806,
+            "two_ply_percentile": 66.68734491315136,
+            "two_ply_alternatives": 806
+          }
         },
         {
           "turn": 7,
@@ -398,7 +616,19 @@
             "upper": 2.482864019805059
           },
           "completion_tokens": 6499,
-          "latency_seconds": 43.71036558299966
+          "latency_seconds": 43.71036558299966,
+          "strength": {
+            "reply_pressure": -5.288368445080788,
+            "two_ply": 0.2903318254678382,
+            "opponent_mass": 197.0200810667155,
+            "safe_replies": 332,
+            "unavailable_reason": null,
+            "legal_alternatives": 806,
+            "reply_pressure_percentile": 94.09937888198758,
+            "reply_pressure_alternatives": 805,
+            "two_ply_percentile": 89.62732919254658,
+            "two_ply_alternatives": 805
+          }
         },
         {
           "turn": 8,
@@ -414,7 +644,19 @@
             "upper": 0.4821095184087493
           },
           "completion_tokens": 2205,
-          "latency_seconds": 17.64042770800006
+          "latency_seconds": 17.64042770800006,
+          "strength": {
+            "reply_pressure": -6.559052843053901,
+            "two_ply": -0.49314989685539246,
+            "opponent_mass": 704.6030611543871,
+            "safe_replies": 1053,
+            "unavailable_reason": null,
+            "legal_alternatives": 332,
+            "reply_pressure_percentile": 75.45180722891567,
+            "reply_pressure_alternatives": 332,
+            "two_ply_percentile": 74.84939759036145,
+            "two_ply_alternatives": 332
+          }
         },
         {
           "turn": 9,
@@ -430,7 +672,19 @@
             "upper": 8.527312106854753
           },
           "completion_tokens": 4580,
-          "latency_seconds": 35.042349666997325
+          "latency_seconds": 35.042349666997325,
+          "strength": {
+            "reply_pressure": -3.8455054636808006,
+            "two_ply": 1.9929048647290628,
+            "opponent_mass": 45.78232514189086,
+            "safe_replies": 187,
+            "unavailable_reason": null,
+            "legal_alternatives": 1053,
+            "reply_pressure_percentile": 99.52516619183285,
+            "reply_pressure_alternatives": 1053,
+            "two_ply_percentile": 99.52516619183285,
+            "two_ply_alternatives": 1053
+          }
         },
         {
           "turn": 10,
@@ -446,7 +700,19 @@
             "upper": 3.109606393736433
           },
           "completion_tokens": 2543,
-          "latency_seconds": 18.591813875002117
+          "latency_seconds": 18.591813875002117,
+          "strength": {
+            "reply_pressure": -6.893715400273925,
+            "two_ply": -0.6546714886321823,
+            "opponent_mass": 985.0582207507168,
+            "safe_replies": 2485,
+            "unavailable_reason": null,
+            "legal_alternatives": 187,
+            "reply_pressure_percentile": 68.18181818181819,
+            "reply_pressure_alternatives": 187,
+            "two_ply_percentile": 58.02139037433155,
+            "two_ply_alternatives": 187
+          }
         },
         {
           "turn": 11,
@@ -462,7 +728,19 @@
             "upper": 8.515259368894535
           },
           "completion_tokens": 6866,
-          "latency_seconds": 48.51948920799987
+          "latency_seconds": 48.51948920799987,
+          "strength": {
+            "reply_pressure": -5.866161317220807,
+            "two_ply": 0.11674888471717537,
+            "opponent_mass": 351.8917374865461,
+            "safe_replies": 897,
+            "unavailable_reason": null,
+            "legal_alternatives": 2485,
+            "reply_pressure_percentile": 91.98227236099919,
+            "reply_pressure_alternatives": 2482,
+            "two_ply_percentile": 89.10153102336825,
+            "two_ply_alternatives": 2482
+          }
         },
         {
           "turn": 12,
@@ -478,7 +756,19 @@
             "upper": 0.0361582138806562
           },
           "completion_tokens": 9504,
-          "latency_seconds": 62.04090675000043
+          "latency_seconds": 62.04090675000043,
+          "strength": {
+            "reply_pressure": -5.523497861417284,
+            "two_ply": 0.4720435295862311,
+            "opponent_mass": 249.5097548834681,
+            "safe_replies": 423,
+            "unavailable_reason": null,
+            "legal_alternatives": 897,
+            "reply_pressure_percentile": 93.45637583892618,
+            "reply_pressure_alternatives": 894,
+            "two_ply_percentile": 98.8255033557047,
+            "two_ply_alternatives": 894
+          }
         },
         {
           "turn": 13,
@@ -494,7 +784,19 @@
             "upper": 4.007535371772729
           },
           "completion_tokens": 2183,
-          "latency_seconds": 16.591859957999986
+          "latency_seconds": 16.591859957999986,
+          "strength": {
+            "reply_pressure": -5.288368445080788,
+            "two_ply": 0.2903318254678382,
+            "opponent_mass": 197.0200810667155,
+            "safe_replies": 331,
+            "unavailable_reason": null,
+            "legal_alternatives": 423,
+            "reply_pressure_percentile": 93.73522458628841,
+            "reply_pressure_alternatives": 423,
+            "two_ply_percentile": 93.49881796690308,
+            "two_ply_alternatives": 423
+          }
         },
         {
           "turn": 14,
@@ -510,7 +812,19 @@
             "upper": 1.380038496445045
           },
           "completion_tokens": 4500,
-          "latency_seconds": 32.37107645799915
+          "latency_seconds": 32.37107645799915,
+          "strength": {
+            "reply_pressure": -6.2117745556282005,
+            "two_ply": -0.33449402038489495,
+            "opponent_mass": 497.58523394967017,
+            "safe_replies": 945,
+            "unavailable_reason": null,
+            "legal_alternatives": 331,
+            "reply_pressure_percentile": 82.3262839879154,
+            "reply_pressure_alternatives": 331,
+            "two_ply_percentile": 79.90936555891238,
+            "two_ply_alternatives": 331
+          }
         },
         {
           "turn": 15,
@@ -526,7 +840,19 @@
             "upper": 21.652743745532955
           },
           "completion_tokens": 9251,
-          "latency_seconds": 58.92833658299787
+          "latency_seconds": 58.92833658299787,
+          "strength": {
+            "reply_pressure": -7.411194058922228,
+            "two_ply": -1.465088760477772,
+            "opponent_mass": 1653.400619751786,
+            "safe_replies": 1388,
+            "unavailable_reason": null,
+            "legal_alternatives": 945,
+            "reply_pressure_percentile": 41.6931216931217,
+            "reply_pressure_alternatives": 945,
+            "two_ply_percentile": 37.61904761904762,
+            "two_ply_alternatives": 945
+          }
         },
         {
           "turn": 16,
@@ -542,7 +868,19 @@
             "upper": 12.613190275368904
           },
           "completion_tokens": 8166,
-          "latency_seconds": 50.7755962500014
+          "latency_seconds": 50.7755962500014,
+          "strength": {
+            "reply_pressure": -6.025587234339124,
+            "two_ply": -0.11250792274614074,
+            "opponent_mass": 412.884617934233,
+            "safe_replies": 1144,
+            "unavailable_reason": null,
+            "legal_alternatives": 1388,
+            "reply_pressure_percentile": 93.19164265129683,
+            "reply_pressure_alternatives": 1388,
+            "two_ply_percentile": 88.29250720461096,
+            "two_ply_alternatives": 1388
+          }
         },
         {
           "turn": 17,
@@ -558,7 +896,19 @@
             "upper": 1.0184563576384829
           },
           "completion_tokens": 2989,
-          "latency_seconds": 21.338961417000974
+          "latency_seconds": 21.338961417000974,
+          "strength": {
+            "reply_pressure": -6.023123476461764,
+            "two_ply": -0.10808219723057633,
+            "opponent_mass": 411.86616157659455,
+            "safe_replies": 1143,
+            "unavailable_reason": null,
+            "legal_alternatives": 1144,
+            "reply_pressure_percentile": 90.07867132867133,
+            "reply_pressure_alternatives": 1144,
+            "two_ply_percentile": 84.22202797202797,
+            "two_ply_alternatives": 1144
+          }
         },
         {
           "turn": 18,
@@ -574,7 +924,19 @@
             "upper": 26.124309528774106
           },
           "completion_tokens": 7800,
-          "latency_seconds": 54.18139124999652
+          "latency_seconds": 54.18139124999652,
+          "strength": {
+            "reply_pressure": -5.866161317220807,
+            "two_ply": 0.11629243018324509,
+            "opponent_mass": 351.8917374865461,
+            "safe_replies": 896,
+            "unavailable_reason": null,
+            "legal_alternatives": 1143,
+            "reply_pressure_percentile": 91.60104986876641,
+            "reply_pressure_alternatives": 1143,
+            "two_ply_percentile": 88.4514435695538,
+            "two_ply_alternatives": 1143
+          }
         },
         {
           "turn": 19,
@@ -590,7 +952,19 @@
             "upper": 0.4037667216673276
           },
           "completion_tokens": 5070,
-          "latency_seconds": 34.13168337499883
+          "latency_seconds": 34.13168337499883,
+          "strength": {
+            "reply_pressure": -6.494950338087354,
+            "two_ply": 0.06670024718547563,
+            "opponent_mass": 660.7913586689921,
+            "safe_replies": 1053,
+            "unavailable_reason": null,
+            "legal_alternatives": 896,
+            "reply_pressure_percentile": 81.46696528555431,
+            "reply_pressure_alternatives": 893,
+            "two_ply_percentile": 86.84210526315789,
+            "two_ply_alternatives": 893
+          }
         },
         {
           "turn": 20,
@@ -603,7 +977,19 @@
           "outcome": "VALID",
           "frequency": null,
           "completion_tokens": 6353,
-          "latency_seconds": 43.721887208001135
+          "latency_seconds": 43.721887208001135,
+          "strength": {
+            "reply_pressure": -5.281374862306058,
+            "two_ply": 0.29729409796982864,
+            "opponent_mass": 195.64004257027048,
+            "safe_replies": 330,
+            "unavailable_reason": null,
+            "legal_alternatives": 1053,
+            "reply_pressure_percentile": 97.52851711026616,
+            "reply_pressure_alternatives": 1052,
+            "two_ply_percentile": 97.0532319391635,
+            "two_ply_alternatives": 1052
+          }
         },
         {
           "turn": 21,
@@ -619,7 +1005,19 @@
             "upper": 5.592470413541492
           },
           "completion_tokens": 382,
-          "latency_seconds": 3.555249458000617
+          "latency_seconds": 3.555249458000617,
+          "strength": {
+            "reply_pressure": -7.751867881318141,
+            "two_ply": -1.561692492523366,
+            "opponent_mass": 2324.9128888363925,
+            "safe_replies": 2918,
+            "unavailable_reason": null,
+            "legal_alternatives": 330,
+            "reply_pressure_percentile": 31.666666666666668,
+            "reply_pressure_alternatives": 330,
+            "two_ply_percentile": 31.363636363636363,
+            "two_ply_alternatives": 330
+          }
         },
         {
           "turn": 22,
@@ -635,7 +1033,19 @@
             "upper": 37.03806375175217
           },
           "completion_tokens": 2776,
-          "latency_seconds": 19.906535916001303
+          "latency_seconds": 19.906535916001303,
+          "strength": {
+            "reply_pressure": -6.36296830978228,
+            "two_ply": -0.5066303900820017,
+            "opponent_mass": 578.9653206570671,
+            "safe_replies": 805,
+            "unavailable_reason": null,
+            "legal_alternatives": 2918,
+            "reply_pressure_percentile": 79.77335164835165,
+            "reply_pressure_alternatives": 2912,
+            "two_ply_percentile": 71.5831043956044,
+            "two_ply_alternatives": 2912
+          }
         },
         {
           "turn": 23,
@@ -651,7 +1061,19 @@
             "upper": 2.874578003512168
           },
           "completion_tokens": 8046,
-          "latency_seconds": 51.80638616700162
+          "latency_seconds": 51.80638616700162,
+          "strength": {
+            "reply_pressure": -5.252522465917523,
+            "two_ply": 0.28692907045737037,
+            "opponent_mass": 190.047572156729,
+            "safe_replies": 329,
+            "unavailable_reason": null,
+            "legal_alternatives": 805,
+            "reply_pressure_percentile": 94.1542288557214,
+            "reply_pressure_alternatives": 804,
+            "two_ply_percentile": 89.61442786069652,
+            "two_ply_alternatives": 804
+          }
         },
         {
           "turn": 24,
@@ -664,9 +1086,13 @@
           "outcome": "INVALID_WORD",
           "frequency": null,
           "completion_tokens": 13386,
-          "latency_seconds": 85.68519120899873
+          "latency_seconds": 85.68519120899873,
+          "strength": null
         }
-      ]
+      ],
+      "competition": "model-model",
+      "valid_words": 23,
+      "policy_warning": null
     },
     {
       "id": "20261016T050924Z-3b7e8dee-001",
@@ -676,6 +1102,8 @@
         "configuration-2",
         "configuration-2"
       ],
+      "vocabulary_version": "jmdict-2026-10-13-noun-v2",
+      "unfinished": false,
       "player_labels": [
         "DeepSeek Flash — thinking B",
         "DeepSeek Flash — thinking A"
@@ -699,7 +1127,19 @@
             "upper": 18.055001464407663
           },
           "completion_tokens": 369,
-          "latency_seconds": 4.472606040999381
+          "latency_seconds": 4.472606040999381,
+          "strength": {
+            "reply_pressure": -7.992725117402105,
+            "two_ply": -2.1651854074898633,
+            "opponent_mass": 2958.350558704668,
+            "safe_replies": 3595,
+            "unavailable_reason": null,
+            "legal_alternatives": 7155,
+            "reply_pressure_percentile": 20.11044317069761,
+            "reply_pressure_alternatives": 7153,
+            "two_ply_percentile": 11.12120788480358,
+            "two_ply_alternatives": 7153
+          }
         },
         {
           "turn": 2,
@@ -715,7 +1155,19 @@
             "upper": 23.635419139988937
           },
           "completion_tokens": 1594,
-          "latency_seconds": 13.51034191600047
+          "latency_seconds": 13.51034191600047,
+          "strength": {
+            "reply_pressure": -5.288368445080788,
+            "two_ply": 0.2928175278991869,
+            "opponent_mass": 197.0200810667155,
+            "safe_replies": 332,
+            "unavailable_reason": null,
+            "legal_alternatives": 3595,
+            "reply_pressure_percentile": 97.69123783031989,
+            "reply_pressure_alternatives": 3595,
+            "two_ply_percentile": 97.41307371349096,
+            "two_ply_alternatives": 3595
+          }
         },
         {
           "turn": 3,
@@ -731,7 +1183,19 @@
             "upper": 5.592470413541492
           },
           "completion_tokens": 205,
-          "latency_seconds": 2.54476049999721
+          "latency_seconds": 2.54476049999721,
+          "strength": {
+            "reply_pressure": -7.751867881318141,
+            "two_ply": -1.5585758508802945,
+            "opponent_mass": 2324.9128888363925,
+            "safe_replies": 2918,
+            "unavailable_reason": null,
+            "legal_alternatives": 332,
+            "reply_pressure_percentile": 31.47590361445783,
+            "reply_pressure_alternatives": 332,
+            "two_ply_percentile": 31.174698795180724,
+            "two_ply_alternatives": 332
+          }
         },
         {
           "turn": 4,
@@ -747,7 +1211,19 @@
             "upper": 9.69040132001586
           },
           "completion_tokens": 582,
-          "latency_seconds": 5.239998207998724
+          "latency_seconds": 5.239998207998724,
+          "strength": {
+            "reply_pressure": -8.402456876839727,
+            "two_ply": -2.1608145930860587,
+            "opponent_mass": 4457.006075785206,
+            "safe_replies": 7154,
+            "unavailable_reason": null,
+            "legal_alternatives": 2918,
+            "reply_pressure_percentile": 10.216346153846153,
+            "reply_pressure_alternatives": 2912,
+            "two_ply_percentile": 7.503434065934066,
+            "two_ply_alternatives": 2912
+          }
         },
         {
           "turn": 5,
@@ -763,7 +1239,19 @@
             "upper": 35.94126459737226
           },
           "completion_tokens": 11045,
-          "latency_seconds": 73.11453066600006
+          "latency_seconds": 73.11453066600006,
+          "strength": {
+            "reply_pressure": -5.25972003444891,
+            "two_ply": 0.28338472224632927,
+            "opponent_mass": 191.427610653174,
+            "safe_replies": 331,
+            "unavailable_reason": null,
+            "legal_alternatives": 7154,
+            "reply_pressure_percentile": 97.82578299776286,
+            "reply_pressure_alternatives": 7152,
+            "two_ply_percentile": 97.40631991051454,
+            "two_ply_alternatives": 7152
+          }
         },
         {
           "turn": 6,
@@ -779,7 +1267,19 @@
             "upper": 0.4821095184087493
           },
           "completion_tokens": 998,
-          "latency_seconds": 8.847218500002782
+          "latency_seconds": 8.847218500002782,
+          "strength": {
+            "reply_pressure": -6.559052843053901,
+            "two_ply": -0.49842063299702577,
+            "opponent_mass": 704.6030611543871,
+            "safe_replies": 1053,
+            "unavailable_reason": null,
+            "legal_alternatives": 331,
+            "reply_pressure_percentile": 75.37764350453172,
+            "reply_pressure_alternatives": 331,
+            "two_ply_percentile": 76.58610271903324,
+            "two_ply_alternatives": 331
+          }
         },
         {
           "turn": 7,
@@ -795,7 +1295,19 @@
             "upper": 8.714129545238144
           },
           "completion_tokens": 3312,
-          "latency_seconds": 24.00359629200102
+          "latency_seconds": 24.00359629200102,
+          "strength": {
+            "reply_pressure": -5.866161317220807,
+            "two_ply": 0.125772816722324,
+            "opponent_mass": 351.8917374865461,
+            "safe_replies": 898,
+            "unavailable_reason": null,
+            "legal_alternatives": 1053,
+            "reply_pressure_percentile": 93.25735992402659,
+            "reply_pressure_alternatives": 1053,
+            "two_ply_percentile": 90.40835707502374,
+            "two_ply_alternatives": 1053
+          }
         },
         {
           "turn": 8,
@@ -811,7 +1323,19 @@
             "upper": 0.0361582138806562
           },
           "completion_tokens": 5233,
-          "latency_seconds": 34.58167650000178
+          "latency_seconds": 34.58167650000178,
+          "strength": {
+            "reply_pressure": -5.523497861417284,
+            "two_ply": 0.4713848368574647,
+            "opponent_mass": 249.5097548834681,
+            "safe_replies": 423,
+            "unavailable_reason": null,
+            "legal_alternatives": 898,
+            "reply_pressure_percentile": 93.46368715083798,
+            "reply_pressure_alternatives": 895,
+            "two_ply_percentile": 98.8268156424581,
+            "two_ply_alternatives": 895
+          }
         },
         {
           "turn": 9,
@@ -827,7 +1351,19 @@
             "upper": 4.007535371772729
           },
           "completion_tokens": 2518,
-          "latency_seconds": 17.634852082999714
+          "latency_seconds": 17.634852082999714,
+          "strength": {
+            "reply_pressure": -5.25972003444891,
+            "two_ply": 0.28338472224632927,
+            "opponent_mass": 191.427610653174,
+            "safe_replies": 330,
+            "unavailable_reason": null,
+            "legal_alternatives": 423,
+            "reply_pressure_percentile": 93.73522458628841,
+            "reply_pressure_alternatives": 423,
+            "two_ply_percentile": 93.49881796690308,
+            "two_ply_alternatives": 423
+          }
         },
         {
           "turn": 10,
@@ -843,7 +1379,19 @@
             "upper": 1.380038496445045
           },
           "completion_tokens": 3812,
-          "latency_seconds": 27.80363054099871
+          "latency_seconds": 27.80363054099871,
+          "strength": {
+            "reply_pressure": -6.2117745556282005,
+            "two_ply": -0.33696989274228173,
+            "opponent_mass": 497.58523394967017,
+            "safe_replies": 945,
+            "unavailable_reason": null,
+            "legal_alternatives": 330,
+            "reply_pressure_percentile": 82.27272727272727,
+            "reply_pressure_alternatives": 330,
+            "two_ply_percentile": 79.84848484848484,
+            "two_ply_alternatives": 330
+          }
         },
         {
           "turn": 11,
@@ -859,7 +1407,19 @@
             "upper": 1.217326533982092
           },
           "completion_tokens": 950,
-          "latency_seconds": 8.514502999998513
+          "latency_seconds": 8.514502999998513,
+          "strength": {
+            "reply_pressure": -6.494950338087354,
+            "two_ply": 0.06840730478983215,
+            "opponent_mass": 660.7913586689921,
+            "safe_replies": 1053,
+            "unavailable_reason": null,
+            "legal_alternatives": 945,
+            "reply_pressure_percentile": 83.3862433862434,
+            "reply_pressure_alternatives": 945,
+            "two_ply_percentile": 87.03703703703704,
+            "two_ply_alternatives": 945
+          }
         },
         {
           "turn": 12,
@@ -875,7 +1435,19 @@
             "upper": 1.8561216458736849
           },
           "completion_tokens": 11756,
-          "latency_seconds": 72.2264997079983
+          "latency_seconds": 72.2264997079983,
+          "strength": {
+            "reply_pressure": -6.598639447483371,
+            "two_ply": -0.41301185423784936,
+            "opponent_mass": 733.0957336923442,
+            "safe_replies": 887,
+            "unavailable_reason": null,
+            "legal_alternatives": 1053,
+            "reply_pressure_percentile": 73.95437262357414,
+            "reply_pressure_alternatives": 1052,
+            "two_ply_percentile": 81.4638783269962,
+            "two_ply_alternatives": 1052
+          }
         },
         {
           "turn": 13,
@@ -891,7 +1463,19 @@
             "upper": 42.359347561188734
           },
           "completion_tokens": 4680,
-          "latency_seconds": 31.63249816700045
+          "latency_seconds": 31.63249816700045,
+          "strength": {
+            "reply_pressure": -6.539204938142555,
+            "two_ply": -0.31510801983531334,
+            "opponent_mass": 690.7363861311554,
+            "safe_replies": 886,
+            "unavailable_reason": null,
+            "legal_alternatives": 887,
+            "reply_pressure_percentile": 69.69525959367945,
+            "reply_pressure_alternatives": 886,
+            "two_ply_percentile": 70.372460496614,
+            "two_ply_alternatives": 886
+          }
         },
         {
           "turn": 14,
@@ -904,19 +1488,2149 @@
           "outcome": "INVALID_WORD",
           "frequency": null,
           "completion_tokens": 7022,
-          "latency_seconds": 48.88682499999777
+          "latency_seconds": 48.88682499999777,
+          "strength": null
         }
-      ]
+      ],
+      "competition": "model-model",
+      "valid_words": 13,
+      "policy_warning": null
+    },
+    {
+      "id": "20261028T054644Z-00fdf626-000",
+      "date": "2026-10-28T05:46:45.118926+00:00",
+      "opening": "か",
+      "players": [
+        "configuration-1",
+        "configuration-3"
+      ],
+      "vocabulary_version": "jmdict-2026-10-13-noun-v2",
+      "unfinished": false,
+      "player_labels": [
+        "DeepSeek Flash — non-thinking",
+        "MemoryBot — current"
+      ],
+      "same_configuration": false,
+      "winner_index": 1,
+      "ending": "ENDS_IN_N",
+      "ending_description": "The submitted word ends in ん (n).",
+      "turns": [
+        {
+          "turn": 1,
+          "player_index": 0,
+          "word": "かんがえ",
+          "romanization": "kangae",
+          "meaning": "考え: thinking; thought; view",
+          "required_kana": "か",
+          "next_kana": "え",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 58.359357203379105,
+            "upper": 58.359357203379105
+          },
+          "completion_tokens": 4,
+          "latency_seconds": 4.194266833015718,
+          "strength": {
+            "reply_pressure": -6.959912625529564,
+            "two_ply": -1.0125222670204668,
+            "opponent_mass": 1052.5415005899815,
+            "safe_replies": 2476,
+            "unavailable_reason": null,
+            "legal_alternatives": 7155,
+            "reply_pressure_percentile": 63.770445966727245,
+            "reply_pressure_alternatives": 7153,
+            "two_ply_percentile": 60.582972179505106,
+            "two_ply_alternatives": 7153
+          }
+        },
+        {
+          "turn": 2,
+          "player_index": 1,
+          "word": "えだ",
+          "romanization": "eda",
+          "meaning": "枝: branch; bough; limb",
+          "required_kana": "え",
+          "next_kana": "だ",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 39.33411033317383,
+            "upper": 39.33411033317383
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -6.6901258216828525,
+            "two_ply": -0.4711910093284635,
+            "opponent_mass": 803.4234596902205,
+            "safe_replies": 1735,
+            "unavailable_reason": null,
+            "legal_alternatives": 2476,
+            "reply_pressure_percentile": 75.97979797979798,
+            "reply_pressure_alternatives": 2475,
+            "two_ply_percentile": 78.20202020202021,
+            "two_ply_alternatives": 2475
+          }
+        },
+        {
+          "turn": 3,
+          "player_index": 0,
+          "word": "だいがく",
+          "romanization": "daigaku",
+          "meaning": "大学/大學: university; college; the Great Learning (one of the Four Books) / 大覚: great awakening; great enlightening; greatly awakened person",
+          "required_kana": "だ",
+          "next_kana": "く",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 123.73943426858563,
+            "upper": 123.8599616481878
+          },
+          "completion_tokens": 4,
+          "latency_seconds": 2.581560791004449,
+          "strength": {
+            "reply_pressure": -7.353304481480354,
+            "two_ply": -1.2416747917872177,
+            "opponent_mass": 1560.3474563299171,
+            "safe_replies": 2505,
+            "unavailable_reason": null,
+            "legal_alternatives": 1735,
+            "reply_pressure_percentile": 51.90311418685121,
+            "reply_pressure_alternatives": 1734,
+            "two_ply_percentile": 50.865051903114185,
+            "two_ply_alternatives": 1734
+          }
+        },
+        {
+          "turn": 4,
+          "player_index": 1,
+          "word": "くるま",
+          "romanization": "kuruma",
+          "meaning": "車: car; automobile; vehicle / car; automobile; vehicle / 俥: rickshaw; jinrikisha",
+          "required_kana": "く",
+          "next_kana": "ま",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 381.3426026923406,
+            "upper": 381.3426026923406
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -7.455382735582452,
+            "two_ply": -1.2148074796654473,
+            "opponent_mass": 1728.1456742120824,
+            "safe_replies": 2533,
+            "unavailable_reason": null,
+            "legal_alternatives": 2505,
+            "reply_pressure_percentile": 40.51517571884984,
+            "reply_pressure_alternatives": 2504,
+            "two_ply_percentile": 52.13658146964856,
+            "two_ply_alternatives": 2504
+          }
+        },
+        {
+          "turn": 5,
+          "player_index": 0,
+          "word": "まど",
+          "romanization": "mado",
+          "meaning": "牕/牖: window",
+          "required_kana": "ま",
+          "next_kana": "ど",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 48.831667845826196,
+            "upper": 48.831667845826196
+          },
+          "completion_tokens": 2,
+          "latency_seconds": 3.361541500024032,
+          "strength": {
+            "reply_pressure": -7.45545243658047,
+            "two_ply": -1.6196026689875191,
+            "opponent_mass": 1728.2662015916846,
+            "safe_replies": 1632,
+            "unavailable_reason": null,
+            "legal_alternatives": 2533,
+            "reply_pressure_percentile": 42.202921437031186,
+            "reply_pressure_alternatives": 2533,
+            "two_ply_percentile": 31.326490327674694,
+            "two_ply_alternatives": 2533
+          }
+        },
+        {
+          "turn": 6,
+          "player_index": 1,
+          "word": "どれっしんぐ",
+          "romanization": "doresshingu",
+          "meaning": "dressing; putting on clothes",
+          "required_kana": "ど",
+          "next_kana": "ぐ",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 3.7062169227672603,
+            "upper": 3.7062169227672603
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -5.866161317220807,
+            "two_ply": 0.11626458755929381,
+            "opponent_mass": 351.8917374865461,
+            "safe_replies": 898,
+            "unavailable_reason": null,
+            "legal_alternatives": 1632,
+            "reply_pressure_percentile": 93.01470588235294,
+            "reply_pressure_alternatives": 1632,
+            "two_ply_percentile": 90.22671568627452,
+            "two_ply_alternatives": 1632
+          }
+        },
+        {
+          "turn": 7,
+          "player_index": 0,
+          "word": "ぐんかん",
+          "romanization": "gunkan",
+          "meaning": "軍艦: warship; battleship",
+          "required_kana": "ぐ",
+          "next_kana": "ん",
+          "outcome": "ENDS_IN_N",
+          "frequency": {
+            "lower": 2.2056510467200283,
+            "upper": 2.2056510467200283
+          },
+          "completion_tokens": 4,
+          "latency_seconds": 2.9081808750052005,
+          "strength": null
+        }
+      ],
+      "competition": "model-bot",
+      "valid_words": 6,
+      "policy_warning": null
+    },
+    {
+      "id": "20261028T054644Z-00fdf626-001",
+      "date": "2026-10-28T05:47:01.294151+00:00",
+      "opening": "か",
+      "players": [
+        "configuration-3",
+        "configuration-1"
+      ],
+      "vocabulary_version": "jmdict-2026-10-13-noun-v2",
+      "unfinished": false,
+      "player_labels": [
+        "MemoryBot — current",
+        "DeepSeek Flash — non-thinking"
+      ],
+      "same_configuration": false,
+      "winner_index": 0,
+      "ending": "ENDS_IN_N",
+      "ending_description": "The submitted word ends in ん (n).",
+      "turns": [
+        {
+          "turn": 1,
+          "player_index": 0,
+          "word": "かって",
+          "romanization": "katte",
+          "meaning": "勝手: one's own convenience; one's way; selfishness",
+          "required_kana": "か",
+          "next_kana": "て",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 70.56878075708069,
+            "upper": 70.56878075708069
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -7.615131859183318,
+            "two_ply": -1.452185680328058,
+            "opponent_mass": 2027.662238892498,
+            "safe_replies": 2199,
+            "unavailable_reason": null,
+            "legal_alternatives": 7155,
+            "reply_pressure_percentile": 35.607437438836854,
+            "reply_pressure_alternatives": 7153,
+            "two_ply_percentile": 42.310918495736054,
+            "two_ply_alternatives": 7153
+          }
+        },
+        {
+          "turn": 2,
+          "player_index": 1,
+          "word": "てつがく",
+          "romanization": "tetsugaku",
+          "meaning": "哲学: philosophy",
+          "required_kana": "て",
+          "next_kana": "く",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 11.196993565043202,
+            "upper": 11.196993565043202
+          },
+          "completion_tokens": 4,
+          "latency_seconds": 3.5339814159669913,
+          "strength": {
+            "reply_pressure": -7.353304481480354,
+            "two_ply": -1.2415993225755528,
+            "opponent_mass": 1560.3474563299171,
+            "safe_replies": 2505,
+            "unavailable_reason": null,
+            "legal_alternatives": 2199,
+            "reply_pressure_percentile": 53.2302092811647,
+            "reply_pressure_alternatives": 2198,
+            "two_ply_percentile": 47.83894449499545,
+            "two_ply_alternatives": 2198
+          }
+        },
+        {
+          "turn": 3,
+          "player_index": 0,
+          "word": "くるま",
+          "romanization": "kuruma",
+          "meaning": "車: car; automobile; vehicle / car; automobile; vehicle / 俥: rickshaw; jinrikisha",
+          "required_kana": "く",
+          "next_kana": "ま",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 381.3426026923406,
+            "upper": 381.3426026923406
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -7.455382735582452,
+            "two_ply": -1.2147505927736955,
+            "opponent_mass": 1728.1456742120824,
+            "safe_replies": 2533,
+            "unavailable_reason": null,
+            "legal_alternatives": 2505,
+            "reply_pressure_percentile": 40.51517571884984,
+            "reply_pressure_alternatives": 2504,
+            "two_ply_percentile": 52.13658146964856,
+            "two_ply_alternatives": 2504
+          }
+        },
+        {
+          "turn": 4,
+          "player_index": 1,
+          "word": "まど",
+          "romanization": "mado",
+          "meaning": "牕/牖: window",
+          "required_kana": "ま",
+          "next_kana": "ど",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 48.831667845826196,
+            "upper": 48.831667845826196
+          },
+          "completion_tokens": 2,
+          "latency_seconds": 2.41858608397888,
+          "strength": {
+            "reply_pressure": -7.45545243658047,
+            "two_ply": -1.6193976943629682,
+            "opponent_mass": 1728.2662015916846,
+            "safe_replies": 1632,
+            "unavailable_reason": null,
+            "legal_alternatives": 2533,
+            "reply_pressure_percentile": 42.202921437031186,
+            "reply_pressure_alternatives": 2533,
+            "two_ply_percentile": 31.326490327674694,
+            "two_ply_alternatives": 2533
+          }
+        },
+        {
+          "turn": 5,
+          "player_index": 0,
+          "word": "どれっしんぐ",
+          "romanization": "doresshingu",
+          "meaning": "dressing; putting on clothes",
+          "required_kana": "ど",
+          "next_kana": "ぐ",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 3.7062169227672603,
+            "upper": 3.7062169227672603
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -5.866161317220807,
+            "two_ply": 0.11624952148335055,
+            "opponent_mass": 351.8917374865461,
+            "safe_replies": 898,
+            "unavailable_reason": null,
+            "legal_alternatives": 1632,
+            "reply_pressure_percentile": 93.01470588235294,
+            "reply_pressure_alternatives": 1632,
+            "two_ply_percentile": 90.22671568627452,
+            "two_ply_alternatives": 1632
+          }
+        },
+        {
+          "turn": 6,
+          "player_index": 1,
+          "word": "ぐんかん",
+          "romanization": "gunkan",
+          "meaning": "軍艦: warship; battleship",
+          "required_kana": "ぐ",
+          "next_kana": "ん",
+          "outcome": "ENDS_IN_N",
+          "frequency": {
+            "lower": 2.2056510467200283,
+            "upper": 2.2056510467200283
+          },
+          "completion_tokens": 4,
+          "latency_seconds": 2.6733020410174504,
+          "strength": null
+        }
+      ],
+      "competition": "model-bot",
+      "valid_words": 5,
+      "policy_warning": null
+    },
+    {
+      "id": "20261029T002843Z-1b5afcf7-000",
+      "date": "2026-10-29T00:28:44.153239+00:00",
+      "opening": "か",
+      "players": [
+        "configuration-2",
+        "configuration-3"
+      ],
+      "vocabulary_version": "jmdict-2026-10-13-noun-v2",
+      "unfinished": false,
+      "player_labels": [
+        "DeepSeek Flash — thinking low",
+        "MemoryBot — current"
+      ],
+      "same_configuration": false,
+      "winner_index": 1,
+      "ending": "INVALID_WORD",
+      "ending_description": "The word is not in the benchmark's accepted vocabulary.",
+      "turns": [
+        {
+          "turn": 1,
+          "player_index": 0,
+          "word": "かさ",
+          "romanization": "kasa",
+          "meaning": "傘: umbrella; parasol; something shaped like an umbrella or a conical hat / 笠: conical hat (East-Asian style); coolie hat; something shaped like a conical hat or an umbrella / 嵩: bulk; volume; quantity",
+          "required_kana": "か",
+          "next_kana": "さ",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 2.332204795302325,
+            "upper": 18.055001464407663
+          },
+          "completion_tokens": 677,
+          "latency_seconds": 5.8629019589861855,
+          "strength": {
+            "reply_pressure": -7.992725117402105,
+            "two_ply": -2.1651854074898633,
+            "opponent_mass": 2958.350558704668,
+            "safe_replies": 3595,
+            "unavailable_reason": null,
+            "legal_alternatives": 7155,
+            "reply_pressure_percentile": 20.11044317069761,
+            "reply_pressure_alternatives": 7153,
+            "two_ply_percentile": 11.12120788480358,
+            "two_ply_alternatives": 7153
+          }
+        },
+        {
+          "turn": 2,
+          "player_index": 1,
+          "word": "さいど",
+          "romanization": "saido",
+          "meaning": "side / 再度: a second time; again; once more / 彩度: chroma; chroma saturation; color saturation (colour)",
+          "required_kana": "さ",
+          "next_kana": "ど",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 68.36915607934077,
+            "upper": 68.36915607934077
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -7.45545243658047,
+            "two_ply": -1.602960731427352,
+            "opponent_mass": 1728.2662015916846,
+            "safe_replies": 1632,
+            "unavailable_reason": null,
+            "legal_alternatives": 3595,
+            "reply_pressure_percentile": 38.80389429763561,
+            "reply_pressure_alternatives": 3595,
+            "two_ply_percentile": 32.04450625869263,
+            "two_ply_alternatives": 3595
+          }
+        },
+        {
+          "turn": 3,
+          "player_index": 0,
+          "word": "どぶ",
+          "romanization": "dobu",
+          "meaning": "ditch; drain; gutter / 溝: ditch; drain; gutter",
+          "required_kana": "ど",
+          "next_kana": "ぶ",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 0.0,
+            "upper": 12.209423553701576
+          },
+          "completion_tokens": 1064,
+          "latency_seconds": 9.097147583961487,
+          "strength": {
+            "reply_pressure": -6.86116042532653,
+            "two_ply": -0.4328493796398094,
+            "opponent_mass": 953.4740209259636,
+            "safe_replies": 1715,
+            "unavailable_reason": null,
+            "legal_alternatives": 1632,
+            "reply_pressure_percentile": 77.94117647058823,
+            "reply_pressure_alternatives": 1632,
+            "two_ply_percentile": 81.28063725490196,
+            "two_ply_alternatives": 1632
+          }
+        },
+        {
+          "turn": 4,
+          "player_index": 1,
+          "word": "ぶんせき",
+          "romanization": "bunseki",
+          "meaning": "分析: analysis / 分籍: establishment of a family registry (separate from one's parents') / 文責: responsibility for wording of an article",
+          "required_kana": "ぶ",
+          "next_kana": "き",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 42.021870898302616,
+            "upper": 42.021870898302616
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -7.908064096835461,
+            "two_ply": -1.760617233250497,
+            "opponent_mass": 2718.1214120505683,
+            "safe_replies": 4706,
+            "unavailable_reason": null,
+            "legal_alternatives": 1715,
+            "reply_pressure_percentile": 21.057242990654206,
+            "reply_pressure_alternatives": 1712,
+            "two_ply_percentile": 19.304906542056074,
+            "two_ply_alternatives": 1712
+          }
+        },
+        {
+          "turn": 5,
+          "player_index": 0,
+          "word": "きぬ",
+          "romanization": "kinu",
+          "meaning": "絹: silk / 衣: clothing; garment; dress",
+          "required_kana": "き",
+          "next_kana": "ぬ",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 2.368363009182981,
+            "upper": 11.432021955267468
+          },
+          "completion_tokens": 312,
+          "latency_seconds": 3.0176721670432016,
+          "strength": {
+            "reply_pressure": -3.9732728157329893,
+            "two_ply": 1.8535730959558752,
+            "opponent_mass": 52.15822352284657,
+            "safe_replies": 263,
+            "unavailable_reason": null,
+            "legal_alternatives": 4706,
+            "reply_pressure_percentile": 99.43676939426142,
+            "reply_pressure_alternatives": 4705,
+            "two_ply_percentile": 99.43676939426142,
+            "two_ply_alternatives": 4705
+          }
+        },
+        {
+          "turn": 6,
+          "player_index": 1,
+          "word": "ぬーどる",
+          "romanization": "nuudoru",
+          "meaning": "noodle; noodles",
+          "required_kana": "ぬ",
+          "next_kana": "る",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 3.8990607301307603,
+            "upper": 3.8990607301307603
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -5.288368445080788,
+            "two_ply": 0.2928175278991869,
+            "opponent_mass": 197.0200810667155,
+            "safe_replies": 332,
+            "unavailable_reason": null,
+            "legal_alternatives": 263,
+            "reply_pressure_percentile": 96.95817490494296,
+            "reply_pressure_alternatives": 263,
+            "two_ply_percentile": 96.57794676806084,
+            "two_ply_alternatives": 263
+          }
+        },
+        {
+          "turn": 7,
+          "player_index": 0,
+          "word": "るす",
+          "romanization": "rusu",
+          "meaning": "留主/留守: absence; being away from home; house-sitting",
+          "required_kana": "る",
+          "next_kana": "す",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 5.592470413541492,
+            "upper": 5.592470413541492
+          },
+          "completion_tokens": 160,
+          "latency_seconds": 2.0517941660946235,
+          "strength": {
+            "reply_pressure": -7.751867881318141,
+            "two_ply": -1.5587743536831997,
+            "opponent_mass": 2324.9128888363925,
+            "safe_replies": 2918,
+            "unavailable_reason": null,
+            "legal_alternatives": 332,
+            "reply_pressure_percentile": 31.47590361445783,
+            "reply_pressure_alternatives": 332,
+            "two_ply_percentile": 31.174698795180724,
+            "two_ply_alternatives": 332
+          }
+        },
+        {
+          "turn": 8,
+          "player_index": 1,
+          "word": "すくろーる",
+          "romanization": "sukurooru",
+          "meaning": "scroll; scrolling",
+          "required_kana": "す",
+          "next_kana": "る",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 5.89981523152707,
+            "upper": 5.89981523152707
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -5.25972003444891,
+            "two_ply": 0.28341740823538153,
+            "opponent_mass": 191.427610653174,
+            "safe_replies": 331,
+            "unavailable_reason": null,
+            "legal_alternatives": 2918,
+            "reply_pressure_percentile": 95.57005494505495,
+            "reply_pressure_alternatives": 2912,
+            "two_ply_percentile": 92.63392857142857,
+            "two_ply_alternatives": 2912
+          }
+        },
+        {
+          "turn": 9,
+          "player_index": 0,
+          "word": "るつぼ",
+          "romanization": "rutsubo",
+          "meaning": "The Crucible (play by Arthur Miller) / 坩堝: crucible; melting pot; melting pot (of cultures, ideas, etc.)",
+          "required_kana": "る",
+          "next_kana": "ぼ",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 0.0,
+            "upper": 0.4821095184087493
+          },
+          "completion_tokens": 600,
+          "latency_seconds": 5.66963358304929,
+          "strength": {
+            "reply_pressure": -6.559052843053901,
+            "two_ply": -0.49826553729813927,
+            "opponent_mass": 704.6030611543871,
+            "safe_replies": 1053,
+            "unavailable_reason": null,
+            "legal_alternatives": 331,
+            "reply_pressure_percentile": 75.37764350453172,
+            "reply_pressure_alternatives": 331,
+            "two_ply_percentile": 77.190332326284,
+            "two_ply_alternatives": 331
+          }
+        },
+        {
+          "turn": 10,
+          "player_index": 1,
+          "word": "ぼーと",
+          "romanization": "booto",
+          "meaning": "boat; rowboat; rowing boat / in a daze; absent-mindedly; vacantly",
+          "required_kana": "ぼ",
+          "next_kana": "と",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 11.377784634446485,
+            "upper": 11.377784634446485
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -7.815902504056555,
+            "two_ply": -1.6259462128351965,
+            "opponent_mass": 2478.7239043157238,
+            "safe_replies": 2888,
+            "unavailable_reason": null,
+            "legal_alternatives": 1053,
+            "reply_pressure_percentile": 27.11301044634378,
+            "reply_pressure_alternatives": 1053,
+            "two_ply_percentile": 27.967711301044634,
+            "two_ply_alternatives": 1053
+          }
+        },
+        {
+          "turn": 11,
+          "player_index": 0,
+          "word": "とっぱ",
+          "romanization": "toppa",
+          "meaning": "突破: breaking through; breakthrough; penetration",
+          "required_kana": "と",
+          "next_kana": "ぱ",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 23.69568282979003,
+            "upper": 23.69568282979003
+          },
+          "completion_tokens": 1846,
+          "latency_seconds": 13.614074582932517,
+          "strength": {
+            "reply_pressure": -6.598639447483371,
+            "two_ply": -0.4138341402217556,
+            "opponent_mass": 733.0957336923442,
+            "safe_replies": 887,
+            "unavailable_reason": null,
+            "legal_alternatives": 2888,
+            "reply_pressure_percentile": 78.72229916897507,
+            "reply_pressure_alternatives": 2888,
+            "two_ply_percentile": 82.49653739612188,
+            "two_ply_alternatives": 2888
+          }
+        },
+        {
+          "turn": 12,
+          "player_index": 1,
+          "word": "ぱーく",
+          "romanization": "paaku",
+          "meaning": "park (public, amusement, etc.); parking / perk; special ability",
+          "required_kana": "ぱ",
+          "next_kana": "く",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 23.141256883619967,
+            "upper": 23.141256883619967
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -7.353304481480354,
+            "two_ply": -1.243034605835203,
+            "opponent_mass": 1560.3474563299171,
+            "safe_replies": 2505,
+            "unavailable_reason": null,
+            "legal_alternatives": 887,
+            "reply_pressure_percentile": 49.887133182844245,
+            "reply_pressure_alternatives": 886,
+            "two_ply_percentile": 50.45146726862303,
+            "two_ply_alternatives": 886
+          }
+        },
+        {
+          "turn": 13,
+          "player_index": 0,
+          "word": "くず",
+          "romanization": "kuzu",
+          "meaning": "屑: waste; scrap; garbage / 葛: kudzu (Pueraria montana); Japanese arrowroot / kudzu (Pueraria montana); Japanese arrowroot",
+          "required_kana": "く",
+          "next_kana": "ず",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 5.712997793143679,
+            "upper": 7.032772599787631
+          },
+          "completion_tokens": 597,
+          "latency_seconds": 5.486920875031501,
+          "strength": {
+            "reply_pressure": -3.8455054636808006,
+            "two_ply": 1.9920586486772276,
+            "opponent_mass": 45.78232514189086,
+            "safe_replies": 187,
+            "unavailable_reason": null,
+            "legal_alternatives": 2505,
+            "reply_pressure_percentile": 99.48083067092652,
+            "reply_pressure_alternatives": 2504,
+            "two_ply_percentile": 99.40095846645367,
+            "two_ply_alternatives": 2504
+          }
+        },
+        {
+          "turn": 14,
+          "player_index": 1,
+          "word": "ずれ",
+          "romanization": "zure",
+          "meaning": "gap; lag; slippage",
+          "required_kana": "ず",
+          "next_kana": "れ",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 8.063281695386332,
+            "upper": 8.063281695386332
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -7.100006325716592,
+            "two_ply": -1.1664271619244824,
+            "opponent_mass": 1210.9747410770567,
+            "safe_replies": 1215,
+            "unavailable_reason": null,
+            "legal_alternatives": 187,
+            "reply_pressure_percentile": 52.67379679144385,
+            "reply_pressure_alternatives": 187,
+            "two_ply_percentile": 49.46524064171123,
+            "two_ply_alternatives": 187
+          }
+        },
+        {
+          "turn": 15,
+          "player_index": 0,
+          "word": "れきし",
+          "romanization": "rekishi",
+          "meaning": "歴史/歷史: history / れき死/轢死: death by being run over / 歴仕: (successive lords) using the same retainers",
+          "required_kana": "れ",
+          "next_kana": "し",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 70.55672801912047,
+            "upper": 70.55672801912047
+          },
+          "completion_tokens": 541,
+          "latency_seconds": 4.890594833996147,
+          "strength": {
+            "reply_pressure": -8.422022248573663,
+            "two_ply": -2.1298943615941806,
+            "opponent_mass": 4545.087484798484,
+            "safe_replies": 8699,
+            "unavailable_reason": null,
+            "legal_alternatives": 1215,
+            "reply_pressure_percentile": 11.985172981878089,
+            "reply_pressure_alternatives": 1214,
+            "two_ply_percentile": 12.726523887973642,
+            "two_ply_alternatives": 1214
+          }
+        },
+        {
+          "turn": 16,
+          "player_index": 1,
+          "word": "しごと",
+          "romanization": "shigoto",
+          "meaning": "仕事: work; job; labor",
+          "required_kana": "し",
+          "next_kana": "と",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 284.29395663665935,
+            "upper": 284.29395663665935
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -7.806300780034049,
+            "two_ply": -1.6125098302957666,
+            "opponent_mass": 2455.028221485934,
+            "safe_replies": 2887,
+            "unavailable_reason": null,
+            "legal_alternatives": 8699,
+            "reply_pressure_percentile": 29.210254052189907,
+            "reply_pressure_alternatives": 8699,
+            "two_ply_percentile": 28.951603632601447,
+            "two_ply_alternatives": 8699
+          }
+        },
+        {
+          "turn": 17,
+          "player_index": 0,
+          "word": "とんぼ",
+          "romanization": "tonbo",
+          "meaning": "蜻蛉/蜻蜒: dragonfly / (color) registration mark; register mark; Japanese-style (double-lined) crop mark / dragonfly",
+          "required_kana": "と",
+          "next_kana": "ぼ",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 0.0,
+            "upper": 2.2960465814216686
+          },
+          "completion_tokens": 1567,
+          "latency_seconds": 12.002121124998666,
+          "strength": {
+            "reply_pressure": -6.5427965137702095,
+            "two_ply": -0.49640994393011084,
+            "opponent_mass": 693.2252765199406,
+            "safe_replies": 1052,
+            "unavailable_reason": null,
+            "legal_alternatives": 2887,
+            "reply_pressure_percentile": 83.44302043643921,
+            "reply_pressure_alternatives": 2887,
+            "two_ply_percentile": 80.2216834083824,
+            "two_ply_alternatives": 2887
+          }
+        },
+        {
+          "turn": 18,
+          "player_index": 1,
+          "word": "ぼいる",
+          "romanization": "boiru",
+          "meaning": "boiling (something) / voile (type of fabric)",
+          "required_kana": "ぼ",
+          "next_kana": "る",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 1.054614571519139,
+            "upper": 1.054614571519139
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -5.25972003444891,
+            "two_ply": 0.28146446321253293,
+            "opponent_mass": 191.427610653174,
+            "safe_replies": 330,
+            "unavailable_reason": null,
+            "legal_alternatives": 1052,
+            "reply_pressure_percentile": 97.6235741444867,
+            "reply_pressure_alternatives": 1052,
+            "two_ply_percentile": 97.24334600760456,
+            "two_ply_alternatives": 1052
+          }
+        },
+        {
+          "turn": 19,
+          "player_index": 0,
+          "word": "るり",
+          "romanization": "ruri",
+          "meaning": "琉璃/瑠璃: lapis lazuli; glass",
+          "required_kana": "る",
+          "next_kana": "り",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 2.290020212441559,
+            "upper": 2.290020212441559
+          },
+          "completion_tokens": 1597,
+          "latency_seconds": 12.263090249965899,
+          "strength": {
+            "reply_pressure": -7.366669761908284,
+            "two_ply": -1.2824388972803753,
+            "opponent_mass": 1581.3553785945785,
+            "safe_replies": 2129,
+            "unavailable_reason": null,
+            "legal_alternatives": 330,
+            "reply_pressure_percentile": 46.81818181818182,
+            "reply_pressure_alternatives": 330,
+            "two_ply_percentile": 45.90909090909091,
+            "two_ply_alternatives": 330
+          }
+        },
+        {
+          "turn": 20,
+          "player_index": 1,
+          "word": "りびんぐ",
+          "romanization": "ribingu",
+          "meaning": "living; lifestyle",
+          "required_kana": "り",
+          "next_kana": "ぐ",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 11.239178147903969,
+            "upper": 11.239178147903969
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -5.866161317220807,
+            "two_ply": 0.11420858743386653,
+            "opponent_mass": 351.8917374865461,
+            "safe_replies": 898,
+            "unavailable_reason": null,
+            "legal_alternatives": 2129,
+            "reply_pressure_percentile": 92.88398309065289,
+            "reply_pressure_alternatives": 2129,
+            "two_ply_percentile": 89.26726162517613,
+            "two_ply_alternatives": 2129
+          }
+        },
+        {
+          "turn": 21,
+          "player_index": 0,
+          "word": "ぐあい",
+          "romanization": "guai",
+          "meaning": "具合/具合い: condition; state; health",
+          "required_kana": "ぐ",
+          "next_kana": "い",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 0.0,
+            "upper": 35.320548592421
+          },
+          "completion_tokens": 214,
+          "latency_seconds": 3.0613812080118805,
+          "strength": {
+            "reply_pressure": -8.433702705478387,
+            "two_ply": -2.218096977833583,
+            "opponent_mass": 4598.499193069193,
+            "safe_replies": 4271,
+            "unavailable_reason": null,
+            "legal_alternatives": 898,
+            "reply_pressure_percentile": 4.189944134078212,
+            "reply_pressure_alternatives": 895,
+            "two_ply_percentile": 4.4692737430167595,
+            "two_ply_alternatives": 895
+          }
+        },
+        {
+          "turn": 22,
+          "player_index": 1,
+          "word": "いま",
+          "romanization": "ima",
+          "meaning": "今: now; the present time; just now / 居間: living room (Western style); sitting room",
+          "required_kana": "い",
+          "next_kana": "ま",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 1808.8929921765678,
+            "upper": 1808.8929921765678
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -7.455382735582452,
+            "two_ply": -1.2254186344317644,
+            "opponent_mass": 1728.1456742120824,
+            "safe_replies": 2533,
+            "unavailable_reason": null,
+            "legal_alternatives": 4271,
+            "reply_pressure_percentile": 41.38335287221571,
+            "reply_pressure_alternatives": 4265,
+            "two_ply_percentile": 55.32239155920281,
+            "two_ply_alternatives": 4265
+          }
+        },
+        {
+          "turn": 23,
+          "player_index": 0,
+          "word": "まくら",
+          "romanization": "makura",
+          "meaning": "枕: pillow; bolster; introduction (e.g. to a rakugo story)",
+          "required_kana": "ま",
+          "next_kana": null,
+          "outcome": "INVALID_WORD",
+          "frequency": {
+            "lower": 14.975526915571775,
+            "upper": 14.975526915571775
+          },
+          "completion_tokens": 3968,
+          "latency_seconds": 26.851715917000547,
+          "strength": null
+        }
+      ],
+      "competition": "model-bot",
+      "valid_words": 22,
+      "policy_warning": "Historical referee artifact: まくら (pillow) was excluded by noun-v2’s mixed noun/suffix filter. Accepted by noun-v3; this recorded result has not been rescored."
+    },
+    {
+      "id": "20261029T002843Z-1b5afcf7-001",
+      "date": "2026-10-29T00:30:28.880957+00:00",
+      "opening": "か",
+      "players": [
+        "configuration-3",
+        "configuration-2"
+      ],
+      "vocabulary_version": "jmdict-2026-10-13-noun-v2",
+      "unfinished": false,
+      "player_labels": [
+        "MemoryBot — current",
+        "DeepSeek Flash — thinking low"
+      ],
+      "same_configuration": false,
+      "winner_index": 0,
+      "ending": "INVALID_WORD",
+      "ending_description": "The word is not in the benchmark's accepted vocabulary.",
+      "turns": [
+        {
+          "turn": 1,
+          "player_index": 0,
+          "word": "かって",
+          "romanization": "katte",
+          "meaning": "勝手: one's own convenience; one's way; selfishness",
+          "required_kana": "か",
+          "next_kana": "て",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 70.56878075708069,
+            "upper": 70.56878075708069
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -7.615131859183318,
+            "two_ply": -1.452185680328058,
+            "opponent_mass": 2027.662238892498,
+            "safe_replies": 2199,
+            "unavailable_reason": null,
+            "legal_alternatives": 7155,
+            "reply_pressure_percentile": 35.607437438836854,
+            "reply_pressure_alternatives": 7153,
+            "two_ply_percentile": 42.310918495736054,
+            "two_ply_alternatives": 7153
+          }
+        },
+        {
+          "turn": 2,
+          "player_index": 1,
+          "word": "てがみ",
+          "romanization": "tegami",
+          "meaning": "手紙: letter; note",
+          "required_kana": "て",
+          "next_kana": "み",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 28.872333783703976,
+            "upper": 28.872333783703976
+          },
+          "completion_tokens": 347,
+          "latency_seconds": 5.463255458045751,
+          "strength": {
+            "reply_pressure": -6.8904464820142035,
+            "two_ply": -0.8153345410948729,
+            "opponent_mass": 981.8401397153384,
+            "safe_replies": 1958,
+            "unavailable_reason": null,
+            "legal_alternatives": 2199,
+            "reply_pressure_percentile": 78.04822565969063,
+            "reply_pressure_alternatives": 2198,
+            "two_ply_percentile": 60.714285714285715,
+            "two_ply_alternatives": 2198
+          }
+        },
+        {
+          "turn": 3,
+          "player_index": 0,
+          "word": "みらい",
+          "romanization": "mirai",
+          "meaning": "未来: (distant) future; future existence; world beyond the grave / 味蕾: taste bud",
+          "required_kana": "み",
+          "next_kana": "い",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 77.95710912669476,
+            "upper": 77.95710912669476
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -8.433702705478387,
+            "two_ply": -2.2210140445753215,
+            "opponent_mass": 4598.499193069193,
+            "safe_replies": 4271,
+            "unavailable_reason": null,
+            "legal_alternatives": 1958,
+            "reply_pressure_percentile": 4.366700715015321,
+            "reply_pressure_alternatives": 1958,
+            "two_ply_percentile": 0.02553626149131767,
+            "two_ply_alternatives": 1958
+          }
+        },
+        {
+          "turn": 4,
+          "player_index": 1,
+          "word": "いぬ",
+          "romanization": "inu",
+          "meaning": "戌: the Dog (eleventh sign of the Chinese zodiac) / 犬/狗: dog (Canis (lupus) familiaris); canine; squealer / dog (Canis (lupus) familiaris); canine; squealer",
+          "required_kana": "い",
+          "next_kana": "ぬ",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 66.74806282369134,
+            "upper": 66.74806282369134
+          },
+          "completion_tokens": 232,
+          "latency_seconds": 3.855870791943744,
+          "strength": {
+            "reply_pressure": -3.9732728157329893,
+            "two_ply": 1.8414963683931438,
+            "opponent_mass": 52.15822352284657,
+            "safe_replies": 263,
+            "unavailable_reason": null,
+            "legal_alternatives": 4271,
+            "reply_pressure_percentile": 99.28487690504103,
+            "reply_pressure_alternatives": 4265,
+            "two_ply_percentile": 99.28487690504103,
+            "two_ply_alternatives": 4265
+          }
+        },
+        {
+          "turn": 5,
+          "player_index": 0,
+          "word": "ぬーどる",
+          "romanization": "nuudoru",
+          "meaning": "noodle; noodles",
+          "required_kana": "ぬ",
+          "next_kana": "る",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 3.8990607301307603,
+            "upper": 3.8990607301307603
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -5.288368445080788,
+            "two_ply": 0.29251233228755424,
+            "opponent_mass": 197.0200810667155,
+            "safe_replies": 332,
+            "unavailable_reason": null,
+            "legal_alternatives": 263,
+            "reply_pressure_percentile": 96.95817490494296,
+            "reply_pressure_alternatives": 263,
+            "two_ply_percentile": 96.57794676806084,
+            "two_ply_alternatives": 263
+          }
+        },
+        {
+          "turn": 6,
+          "player_index": 1,
+          "word": "るす",
+          "romanization": "rusu",
+          "meaning": "留主/留守: absence; being away from home; house-sitting",
+          "required_kana": "る",
+          "next_kana": "す",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 5.592470413541492,
+            "upper": 5.592470413541492
+          },
+          "completion_tokens": 246,
+          "latency_seconds": 3.2345205830642954,
+          "strength": {
+            "reply_pressure": -7.751867881318141,
+            "two_ply": -1.5606063310836156,
+            "opponent_mass": 2324.9128888363925,
+            "safe_replies": 2918,
+            "unavailable_reason": null,
+            "legal_alternatives": 332,
+            "reply_pressure_percentile": 31.47590361445783,
+            "reply_pressure_alternatives": 332,
+            "two_ply_percentile": 31.174698795180724,
+            "two_ply_alternatives": 332
+          }
+        },
+        {
+          "turn": 7,
+          "player_index": 0,
+          "word": "すくろーる",
+          "romanization": "sukurooru",
+          "meaning": "scroll; scrolling",
+          "required_kana": "す",
+          "next_kana": "る",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 5.89981523152707,
+            "upper": 5.89981523152707
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -5.25972003444891,
+            "two_ply": 0.2831032964730298,
+            "opponent_mass": 191.427610653174,
+            "safe_replies": 331,
+            "unavailable_reason": null,
+            "legal_alternatives": 2918,
+            "reply_pressure_percentile": 95.57005494505495,
+            "reply_pressure_alternatives": 2912,
+            "two_ply_percentile": 92.63392857142857,
+            "two_ply_alternatives": 2912
+          }
+        },
+        {
+          "turn": 8,
+          "player_index": 1,
+          "word": "るび",
+          "romanization": "rubi",
+          "meaning": "ruby; ruby character; small hiragana or katakana readings of kanji usually above or to the side of the kanji (esp. used by printers and in ref. to printed material)",
+          "required_kana": "る",
+          "next_kana": "び",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 1.380038496445045,
+            "upper": 1.380038496445045
+          },
+          "completion_tokens": 1203,
+          "latency_seconds": 9.584267833968624,
+          "strength": {
+            "reply_pressure": -6.2117745556282005,
+            "two_ply": -0.3372018740468219,
+            "opponent_mass": 497.58523394967017,
+            "safe_replies": 945,
+            "unavailable_reason": null,
+            "legal_alternatives": 331,
+            "reply_pressure_percentile": 82.3262839879154,
+            "reply_pressure_alternatives": 331,
+            "two_ply_percentile": 79.90936555891238,
+            "two_ply_alternatives": 331
+          }
+        },
+        {
+          "turn": 9,
+          "player_index": 0,
+          "word": "びんじょう",
+          "romanization": "binjou",
+          "meaning": "便乗: taking advantage of (an opportunity); jumping on the bandwagon; taking passage (in)",
+          "required_kana": "び",
+          "next_kana": "う",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 1.1269309992804515,
+            "upper": 1.1269309992804515
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -6.893715400273925,
+            "two_ply": -0.6576478151148706,
+            "opponent_mass": 985.0582207507168,
+            "safe_replies": 2485,
+            "unavailable_reason": null,
+            "legal_alternatives": 945,
+            "reply_pressure_percentile": 68.14814814814815,
+            "reply_pressure_alternatives": 945,
+            "two_ply_percentile": 67.51322751322752,
+            "two_ply_alternatives": 945
+          }
+        },
+        {
+          "turn": 10,
+          "player_index": 1,
+          "word": "うめ",
+          "romanization": "ume",
+          "meaning": "梅/楳: Japanese apricot (Prunus mume); Japanese plum; ume / Japanese apricot (Prunus mume); Japanese plum; ume",
+          "required_kana": "う",
+          "next_kana": "め",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 0.0,
+            "upper": 13.926938713032746
+          },
+          "completion_tokens": 863,
+          "latency_seconds": 7.520281207980588,
+          "strength": {
+            "reply_pressure": -6.578321793694504,
+            "two_ply": -0.5169129335860623,
+            "opponent_mass": 718.3311296910763,
+            "safe_replies": 1321,
+            "unavailable_reason": null,
+            "legal_alternatives": 2485,
+            "reply_pressure_percentile": 75.825946817083,
+            "reply_pressure_alternatives": 2482,
+            "two_ply_percentile": 77.23609991941983,
+            "two_ply_alternatives": 2482
+          }
+        },
+        {
+          "turn": 11,
+          "player_index": 0,
+          "word": "めろ",
+          "romanization": "mero",
+          "meaning": "Patagonian toothfish (Dissostichus eleginoides); Chilean sea bass",
+          "required_kana": "め",
+          "next_kana": "ろ",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 4.543882211002463,
+            "upper": 4.543882211002463
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -6.025587234339124,
+            "two_ply": -0.11345509644266372,
+            "opponent_mass": 412.884617934233,
+            "safe_replies": 1144,
+            "unavailable_reason": null,
+            "legal_alternatives": 1321,
+            "reply_pressure_percentile": 89.62906888720666,
+            "reply_pressure_alternatives": 1321,
+            "two_ply_percentile": 84.93565480696442,
+            "two_ply_alternatives": 1321
+          }
+        },
+        {
+          "turn": 12,
+          "player_index": 1,
+          "word": "ろぐ",
+          "romanization": "rogu",
+          "meaning": "log; log (tree trunk or branch); logbook (of a ship or aircraft)",
+          "required_kana": "ろ",
+          "next_kana": "ぐ",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 26.124309528774106,
+            "upper": 26.124309528774106
+          },
+          "completion_tokens": 1817,
+          "latency_seconds": 16.498377416981384,
+          "strength": {
+            "reply_pressure": -5.866161317220807,
+            "two_ply": 0.12193861657749228,
+            "opponent_mass": 351.8917374865461,
+            "safe_replies": 898,
+            "unavailable_reason": null,
+            "legal_alternatives": 1144,
+            "reply_pressure_percentile": 91.60839160839161,
+            "reply_pressure_alternatives": 1144,
+            "two_ply_percentile": 88.46153846153847,
+            "two_ply_alternatives": 1144
+          }
+        },
+        {
+          "turn": 13,
+          "player_index": 0,
+          "word": "ぐるーぷ",
+          "romanization": "guruupu",
+          "meaning": "group (usu. of people)",
+          "required_kana": "ぐ",
+          "next_kana": "ぷ",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 71.34618235551478,
+            "upper": 71.34618235551478
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -6.39053635021517,
+            "two_ply": -0.5698727727189397,
+            "opponent_mass": 595.1762532135613,
+            "safe_replies": 808,
+            "unavailable_reason": null,
+            "legal_alternatives": 898,
+            "reply_pressure_percentile": 82.3463687150838,
+            "reply_pressure_alternatives": 895,
+            "two_ply_percentile": 73.46368715083798,
+            "two_ply_alternatives": 895
+          }
+        },
+        {
+          "turn": 14,
+          "player_index": 1,
+          "word": "ぷろぐらむ",
+          "romanization": "puroguramu",
+          "meaning": "program (of events, music, etc.); programme; program (booklet)",
+          "required_kana": "ぷ",
+          "next_kana": "む",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 41.991739053402064,
+            "upper": 41.991739053402064
+          },
+          "completion_tokens": 671,
+          "latency_seconds": 7.186057082959451,
+          "strength": {
+            "reply_pressure": -6.064665727504998,
+            "two_ply": 0.17485377671693758,
+            "opponent_mass": 429.37878983279234,
+            "safe_replies": 1092,
+            "unavailable_reason": null,
+            "legal_alternatives": 808,
+            "reply_pressure_percentile": 78.99628252788104,
+            "reply_pressure_alternatives": 807,
+            "two_ply_percentile": 80.48327137546468,
+            "two_ply_alternatives": 807
+          }
+        },
+        {
+          "turn": 15,
+          "player_index": 0,
+          "word": "むきゅう",
+          "romanization": "mukyuu",
+          "meaning": "無休: without a holiday; nonstop / 無給: unpaid; nonsalaried / 無窮: eternity; infinitude; immortality",
+          "required_kana": "む",
+          "next_kana": "う",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 1.3559330205246074,
+            "upper": 1.3559330205246074
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -6.893715400273925,
+            "two_ply": -0.6613289776317002,
+            "opponent_mass": 985.0582207507168,
+            "safe_replies": 2484,
+            "unavailable_reason": null,
+            "legal_alternatives": 1092,
+            "reply_pressure_percentile": 69.98166819431714,
+            "reply_pressure_alternatives": 1091,
+            "two_ply_percentile": 62.64894592117324,
+            "two_ply_alternatives": 1091
+          }
+        },
+        {
+          "turn": 16,
+          "player_index": 1,
+          "word": "うさぎ",
+          "romanization": "usagi",
+          "meaning": "兎/兔: rabbit; hare; coney / rabbit; hare; coney",
+          "required_kana": "う",
+          "next_kana": "ぎ",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 0.0,
+            "upper": 20.471575425431517
+          },
+          "completion_tokens": 1571,
+          "latency_seconds": 11.738396957982332,
+          "strength": {
+            "reply_pressure": -6.538638501357327,
+            "two_ply": -0.43102574051993425,
+            "opponent_mass": 690.3446721474484,
+            "safe_replies": 984,
+            "unavailable_reason": null,
+            "legal_alternatives": 2484,
+            "reply_pressure_percentile": 80.65296251511488,
+            "reply_pressure_alternatives": 2481,
+            "two_ply_percentile": 80.27005239822653,
+            "two_ply_alternatives": 2481
+          }
+        },
+        {
+          "turn": 17,
+          "player_index": 0,
+          "word": "ぎかい",
+          "romanization": "gikai",
+          "meaning": "議会: congress; parliament; diet",
+          "required_kana": "ぎ",
+          "next_kana": "い",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 22.0685632051605,
+            "upper": 22.0685632051605
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -8.419084347656833,
+            "two_ply": -2.1659231726949466,
+            "opponent_mass": 4531.751130245502,
+            "safe_replies": 4270,
+            "unavailable_reason": null,
+            "legal_alternatives": 984,
+            "reply_pressure_percentile": 11.546286876907427,
+            "reply_pressure_alternatives": 983,
+            "two_ply_percentile": 1.0681586978636826,
+            "two_ply_alternatives": 983
+          }
+        },
+        {
+          "turn": 18,
+          "player_index": 1,
+          "word": "いっぽ",
+          "romanization": "ippo",
+          "meaning": "一歩/１歩: (a) step; one step; level",
+          "required_kana": "い",
+          "next_kana": "ぽ",
+          "outcome": "VALID",
+          "frequency": null,
+          "completion_tokens": 1686,
+          "latency_seconds": 12.493668582988903,
+          "strength": {
+            "reply_pressure": -6.059485418940929,
+            "two_ply": 0.1355265256431739,
+            "opponent_mass": 427.155059679132,
+            "safe_replies": 428,
+            "unavailable_reason": null,
+            "legal_alternatives": 4270,
+            "reply_pressure_percentile": 91.52204502814259,
+            "reply_pressure_alternatives": 4264,
+            "two_ply_percentile": 90.70121951219512,
+            "two_ply_alternatives": 4264
+          }
+        },
+        {
+          "turn": 19,
+          "player_index": 0,
+          "word": "ぽいんと",
+          "romanization": "pointo",
+          "meaning": "point (of a story, argument, etc.); key point; important part",
+          "required_kana": "ぽ",
+          "next_kana": "と",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 211.24231185977362,
+            "upper": 211.24231185977362
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -7.815902504056555,
+            "two_ply": -1.6342477164591749,
+            "opponent_mass": 2478.7239043157238,
+            "safe_replies": 2888,
+            "unavailable_reason": null,
+            "legal_alternatives": 428,
+            "reply_pressure_percentile": 19.320843091334893,
+            "reply_pressure_alternatives": 427,
+            "two_ply_percentile": 21.89695550351288,
+            "two_ply_alternatives": 427
+          }
+        },
+        {
+          "turn": 20,
+          "player_index": 1,
+          "word": "とら",
+          "romanization": "tora",
+          "meaning": "tiger (Panthera tigris); drunkard; drunk / 寅: the Tiger (third sign of the Chinese zodiac) / 虎: tiger (Panthera tigris); drunkard; drunk",
+          "required_kana": "と",
+          "next_kana": "ら",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 25.61206816546481,
+            "upper": 25.61206816546481
+          },
+          "completion_tokens": 516,
+          "latency_seconds": 4.880461541004479,
+          "strength": {
+            "reply_pressure": -6.525512274727666,
+            "two_ply": -0.580872105847039,
+            "opponent_mass": 681.3292241532048,
+            "safe_replies": 1110,
+            "unavailable_reason": null,
+            "legal_alternatives": 2888,
+            "reply_pressure_percentile": 84.59141274238227,
+            "reply_pressure_alternatives": 2888,
+            "two_ply_percentile": 76.64473684210526,
+            "two_ply_alternatives": 2888
+          }
+        },
+        {
+          "turn": 21,
+          "player_index": 0,
+          "word": "らむ",
+          "romanization": "ramu",
+          "meaning": "lamb; lamb (meat) / rum / ram",
+          "required_kana": "ら",
+          "next_kana": "む",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 14.969500546591666,
+            "upper": 14.969500546591666
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -6.061510196791402,
+            "two_ply": 0.17849625845370642,
+            "opponent_mass": 428.0228568122678,
+            "safe_replies": 1091,
+            "unavailable_reason": null,
+            "legal_alternatives": 1110,
+            "reply_pressure_percentile": 86.10108303249098,
+            "reply_pressure_alternatives": 1108,
+            "two_ply_percentile": 87.27436823104694,
+            "two_ply_alternatives": 1108
+          }
+        },
+        {
+          "turn": 22,
+          "player_index": 1,
+          "word": "むし",
+          "romanization": "mushi",
+          "meaning": "無死: no outs / 無視: disregarding; ignoring / 蒸し: steaming",
+          "required_kana": "む",
+          "next_kana": "し",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 70.30362052195586,
+            "upper": 70.38196331869729
+          },
+          "completion_tokens": 434,
+          "latency_seconds": 4.059832125087269,
+          "strength": {
+            "reply_pressure": -8.422022248573663,
+            "two_ply": -2.1341456086283195,
+            "opponent_mass": 4545.087484798484,
+            "safe_replies": 8699,
+            "unavailable_reason": null,
+            "legal_alternatives": 1091,
+            "reply_pressure_percentile": 2.110091743119266,
+            "reply_pressure_alternatives": 1090,
+            "two_ply_percentile": 17.706422018348626,
+            "two_ply_alternatives": 1090
+          }
+        },
+        {
+          "turn": 23,
+          "player_index": 0,
+          "word": "しつない",
+          "romanization": "shitsunai",
+          "meaning": "室内: indoor; inside the room",
+          "required_kana": "し",
+          "next_kana": "い",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 14.879105011890026,
+            "upper": 14.879105011890026
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -8.419084347656833,
+            "two_ply": -2.1665473781292155,
+            "opponent_mass": 4531.751130245502,
+            "safe_replies": 4269,
+            "unavailable_reason": null,
+            "legal_alternatives": 8699,
+            "reply_pressure_percentile": 9.501092079549373,
+            "reply_pressure_alternatives": 8699,
+            "two_ply_percentile": 0.9368892976204162,
+            "two_ply_alternatives": 8699
+          }
+        },
+        {
+          "turn": 24,
+          "player_index": 1,
+          "word": "いんぷ",
+          "romanization": "inpu",
+          "meaning": "imp (creature in European folklore) / 印譜: book of seals / 婬婦/淫婦: woman of loose morals; lewd woman; prostitute",
+          "required_kana": "い",
+          "next_kana": "ぷ",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 0.1084746416419686,
+            "upper": 0.1084746416419686
+          },
+          "completion_tokens": 7004,
+          "latency_seconds": 44.27461316692643,
+          "strength": {
+            "reply_pressure": -6.317497689346592,
+            "two_ply": -0.4497485313102727,
+            "opponent_mass": 553.1845141601592,
+            "safe_replies": 807,
+            "unavailable_reason": null,
+            "legal_alternatives": 4269,
+            "reply_pressure_percentile": 87.48533896317147,
+            "reply_pressure_alternatives": 4263,
+            "two_ply_percentile": 81.76167018531551,
+            "two_ply_alternatives": 4263
+          }
+        },
+        {
+          "turn": 25,
+          "player_index": 0,
+          "word": "ぷれぜんと",
+          "romanization": "purezento",
+          "meaning": "present; gift",
+          "required_kana": "ぷ",
+          "next_kana": "と",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 36.15218751167609,
+            "upper": 36.15218751167609
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -7.805520197235804,
+            "two_ply": -1.620136310811171,
+            "opponent_mass": 2453.111836150259,
+            "safe_replies": 2887,
+            "unavailable_reason": null,
+            "legal_alternatives": 807,
+            "reply_pressure_percentile": 19.23076923076923,
+            "reply_pressure_alternatives": 806,
+            "two_ply_percentile": 15.570719602977668,
+            "two_ply_alternatives": 806
+          }
+        },
+        {
+          "turn": 26,
+          "player_index": 1,
+          "word": "とけい",
+          "romanization": "tokei",
+          "meaning": "土圭/時計: clock; watch; timepiece / 徒刑: penal servitude",
+          "required_kana": "と",
+          "next_kana": "い",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 35.15181026097793,
+            "upper": 35.15181026097793
+          },
+          "completion_tokens": 170,
+          "latency_seconds": 3.0212490840349346,
+          "strength": {
+            "reply_pressure": -8.419084347656833,
+            "two_ply": -2.1670189623383314,
+            "opponent_mass": 4531.751130245502,
+            "safe_replies": 4268,
+            "unavailable_reason": null,
+            "legal_alternatives": 2887,
+            "reply_pressure_percentile": 5.022514721163838,
+            "reply_pressure_alternatives": 2887,
+            "two_ply_percentile": 0.6754416349151369,
+            "two_ply_alternatives": 2887
+          }
+        },
+        {
+          "turn": 27,
+          "player_index": 0,
+          "word": "いってい",
+          "romanization": "ittei",
+          "meaning": "一定: to fix; to settle; to standardize",
+          "required_kana": "い",
+          "next_kana": "い",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 29.18570497066966,
+            "upper": 29.18570497066966
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -8.412624678768951,
+            "two_ply": -2.1666244942642443,
+            "opponent_mass": 4502.565425274833,
+            "safe_replies": 4267,
+            "unavailable_reason": null,
+            "legal_alternatives": 4268,
+            "reply_pressure_percentile": 14.418113561708118,
+            "reply_pressure_alternatives": 4262,
+            "two_ply_percentile": 11.133270764899109,
+            "two_ply_alternatives": 4262
+          }
+        },
+        {
+          "turn": 28,
+          "player_index": 1,
+          "word": "いぼ",
+          "romanization": "ibo",
+          "meaning": "wart / 異母: different mother / 疣: wart",
+          "required_kana": "い",
+          "next_kana": "ぼ",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 2.0971764050780597,
+            "upper": 2.0971764050780597
+          },
+          "completion_tokens": 609,
+          "latency_seconds": 5.208854084019549,
+          "strength": {
+            "reply_pressure": -6.559052843053901,
+            "two_ply": -0.5083319311658494,
+            "opponent_mass": 704.6030611543871,
+            "safe_replies": 1053,
+            "unavailable_reason": null,
+            "legal_alternatives": 4267,
+            "reply_pressure_percentile": 80.9669091762497,
+            "reply_pressure_alternatives": 4261,
+            "two_ply_percentile": 80.22764609246656,
+            "two_ply_alternatives": 4261
+          }
+        },
+        {
+          "turn": 29,
+          "player_index": 0,
+          "word": "ぼーる",
+          "romanization": "booru",
+          "meaning": "ball; ball (pitch delivered outside the strike zone) / bowl",
+          "required_kana": "ぼ",
+          "next_kana": "る",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 103.7077837787021,
+            "upper": 103.7077837787021
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -5.252522465917523,
+            "two_ply": 0.2700384136911129,
+            "opponent_mass": 190.047572156729,
+            "safe_replies": 330,
+            "unavailable_reason": null,
+            "legal_alternatives": 1053,
+            "reply_pressure_percentile": 97.62583095916429,
+            "reply_pressure_alternatives": 1053,
+            "two_ply_percentile": 94.39696106362773,
+            "two_ply_alternatives": 1053
+          }
+        },
+        {
+          "turn": 30,
+          "player_index": 1,
+          "word": "るーる",
+          "romanization": "ruuru",
+          "meaning": "rule",
+          "required_kana": "る",
+          "next_kana": "る",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 49.42827837485702,
+            "upper": 49.42827837485702
+          },
+          "completion_tokens": 1692,
+          "latency_seconds": 11.939060457982123,
+          "strength": {
+            "reply_pressure": -4.953142427499373,
+            "two_ply": 1.0288413237336655,
+            "opponent_mass": 140.61929378187196,
+            "safe_replies": 329,
+            "unavailable_reason": null,
+            "legal_alternatives": 330,
+            "reply_pressure_percentile": 98.63636363636364,
+            "reply_pressure_alternatives": 330,
+            "two_ply_percentile": 98.63636363636364,
+            "two_ply_alternatives": 330
+          }
+        },
+        {
+          "turn": 31,
+          "player_index": 0,
+          "word": "るーと",
+          "romanization": "ruuto",
+          "meaning": "route; path; channel (e.g. sales, distribution) / loot / root; square root; root (directory)",
+          "required_kana": "る",
+          "next_kana": "と",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 42.69079785509475,
+            "upper": 42.69079785509475
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -7.791092985417381,
+            "two_ply": -1.6380613121461938,
+            "opponent_mass": 2417.960025889281,
+            "safe_replies": 2886,
+            "unavailable_reason": null,
+            "legal_alternatives": 329,
+            "reply_pressure_percentile": 24.46808510638298,
+            "reply_pressure_alternatives": 329,
+            "two_ply_percentile": 23.556231003039514,
+            "two_ply_alternatives": 329
+          }
+        },
+        {
+          "turn": 32,
+          "player_index": 1,
+          "word": "とり",
+          "romanization": "tori",
+          "meaning": "禽/鳥: bird; bird meat (esp. chicken meat); fowl / 酉: the Rooster (tenth sign of the Chinese zodiac); the Cock; the Chicken / 雞/鶏: chicken (Gallus gallus domesticus); domestic chicken; chicken meat",
+          "required_kana": "と",
+          "next_kana": "り",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 75.19703213380467,
+            "upper": 91.25730546579614
+          },
+          "completion_tokens": 366,
+          "latency_seconds": 3.842879790929146,
+          "strength": {
+            "reply_pressure": -7.366669761908284,
+            "two_ply": -1.3328576737135434,
+            "opponent_mass": 1581.3553785945785,
+            "safe_replies": 2129,
+            "unavailable_reason": null,
+            "legal_alternatives": 2886,
+            "reply_pressure_percentile": 45.35689535689536,
+            "reply_pressure_alternatives": 2886,
+            "two_ply_percentile": 43.03534303534303,
+            "two_ply_alternatives": 2886
+          }
+        },
+        {
+          "turn": 33,
+          "player_index": 0,
+          "word": "りーる",
+          "romanization": "riiru",
+          "meaning": "reel",
+          "required_kana": "り",
+          "next_kana": "る",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 4.302827451798088,
+            "upper": 4.302827451798088
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -4.594397325810857,
+            "two_ply": 1.105081294931673,
+            "opponent_mass": 97.9284959267772,
+            "safe_replies": 328,
+            "unavailable_reason": null,
+            "legal_alternatives": 2129,
+            "reply_pressure_percentile": 97.2757162987318,
+            "reply_pressure_alternatives": 2129,
+            "two_ply_percentile": 95.51432597463598,
+            "two_ply_alternatives": 2129
+          }
+        },
+        {
+          "turn": 34,
+          "player_index": 1,
+          "word": "るつぼ",
+          "romanization": "rutsubo",
+          "meaning": "The Crucible (play by Arthur Miller) / 坩堝: crucible; melting pot; melting pot (of cultures, ideas, etc.)",
+          "required_kana": "る",
+          "next_kana": "ぼ",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 0.0,
+            "upper": 0.4821095184087493
+          },
+          "completion_tokens": 334,
+          "latency_seconds": 3.5093035419704393,
+          "strength": {
+            "reply_pressure": -6.4000834723287,
+            "two_ply": -0.10562086638634316,
+            "opponent_mass": 600.895277375685,
+            "safe_replies": 1052,
+            "unavailable_reason": null,
+            "legal_alternatives": 328,
+            "reply_pressure_percentile": 80.33536585365853,
+            "reply_pressure_alternatives": 328,
+            "two_ply_percentile": 81.5548780487805,
+            "two_ply_alternatives": 328
+          }
+        },
+        {
+          "turn": 35,
+          "player_index": 0,
+          "word": "ぼうえい",
+          "romanization": "bouei",
+          "meaning": "防衛: defense; defence; protection",
+          "required_kana": "ぼ",
+          "next_kana": "い",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 29.58947169233699,
+            "upper": 29.58947169233699
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -8.412158900068086,
+            "two_ply": -2.170436324015042,
+            "opponent_mass": 4500.4682488697545,
+            "safe_replies": 4266,
+            "unavailable_reason": null,
+            "legal_alternatives": 1052,
+            "reply_pressure_percentile": 8.127376425855513,
+            "reply_pressure_alternatives": 1052,
+            "two_ply_percentile": 5.56083650190114,
+            "two_ply_alternatives": 1052
+          }
+        },
+        {
+          "turn": 36,
+          "player_index": 1,
+          "word": "いろ",
+          "romanization": "iro",
+          "meaning": "色: colour; color; hue",
+          "required_kana": "い",
+          "next_kana": "ろ",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 0.0,
+            "upper": 328.0212899563329
+          },
+          "completion_tokens": 6516,
+          "latency_seconds": 40.728529166895896,
+          "strength": {
+            "reply_pressure": -5.960387386888204,
+            "two_ply": -0.04977087550028525,
+            "opponent_mass": 386.76030840545894,
+            "safe_replies": 1143,
+            "unavailable_reason": null,
+            "legal_alternatives": 4266,
+            "reply_pressure_percentile": 91.94835680751174,
+            "reply_pressure_alternatives": 4260,
+            "two_ply_percentile": 88.65023474178403,
+            "two_ply_alternatives": 4260
+          }
+        },
+        {
+          "turn": 37,
+          "player_index": 0,
+          "word": "ろーず",
+          "romanization": "roozu",
+          "meaning": "rose",
+          "required_kana": "ろ",
+          "next_kana": "ず",
+          "outcome": "VALID",
+          "frequency": {
+            "lower": 5.471943033939305,
+            "upper": 5.471943033939305
+          },
+          "completion_tokens": 0,
+          "latency_seconds": null,
+          "strength": {
+            "reply_pressure": -3.8455054636808006,
+            "two_ply": 1.9688483912878052,
+            "opponent_mass": 45.78232514189086,
+            "safe_replies": 187,
+            "unavailable_reason": null,
+            "legal_alternatives": 1143,
+            "reply_pressure_percentile": 99.4750656167979,
+            "reply_pressure_alternatives": 1143,
+            "two_ply_percentile": 99.4750656167979,
+            "two_ply_alternatives": 1143
+          }
+        },
+        {
+          "turn": 38,
+          "player_index": 1,
+          "word": "ずいひ",
+          "romanization": "zuihi",
+          "meaning": "No accepted noun gloss found",
+          "required_kana": "ず",
+          "next_kana": null,
+          "outcome": "INVALID_WORD",
+          "frequency": null,
+          "completion_tokens": 256,
+          "latency_seconds": 2.873458916088566,
+          "strength": null
+        }
+      ],
+      "competition": "model-bot",
+      "valid_words": 37,
+      "policy_warning": null
     }
   ],
   "failures": {
-    "ENDS_IN_N": 2,
-    "INVALID_WORD": 2
+    "ENDS_IN_N": 4,
+    "INVALID_WORD": 4
   },
   "excluded": [
     {
       "id": "20261016T045609Z-b5f7b424-000",
-      "reason": "Output token limit reached before completion (not a competitive loss)."
+      "reason": "Output token limit reached before completion (not a competitive loss).",
+      "competition": "model-model",
+      "vocabulary_version": "jmdict-2026-10-13-noun-v2"
+    },
+    {
+      "id": "20261028T060730Z-cffeedd7-000",
+      "reason": "Player/provider infrastructure failure; excluded from competitive outcomes.",
+      "competition": "model-bot",
+      "vocabulary_version": "jmdict-2026-10-13-noun-v2"
     }
   ],
   "atlas": {
@@ -7502,6 +10216,223 @@
     "dictionary": "JMdict / EDRDG · CC BY-SA 4.0",
     "frequency": "TUBELEX · BSD-3-Clause"
   },
+  "evaluations": [
+    {
+      "competition": "model-bot",
+      "vocabulary_version": "jmdict-2026-10-13-noun-v2",
+      "games": 4,
+      "finished": 4,
+      "selfplay": 0,
+      "policy_warnings": 1,
+      "entries": [
+        {
+          "id": "configuration-1",
+          "kind": "llm",
+          "appearances": 2,
+          "wins": 0,
+          "losses": 2,
+          "comparison_games": 2,
+          "win_rate": 0.0,
+          "win_interval": [
+            0,
+            0.6576197724933469
+          ],
+          "selfplay_appearances": 0,
+          "unfinished": 0,
+          "valid_moves": 5,
+          "submissions": 7,
+          "validity": 0.7142857142857143,
+          "mean_length": 5.5,
+          "length_by_result": {
+            "wins": null,
+            "losses": 5.5
+          },
+          "strength": {
+            "two_ply": {
+              "mean": 44.38798984659282,
+              "scored_moves": 5
+            },
+            "reply_pressure": {
+              "mean": 50.66192246176111,
+              "scored_moves": 5
+            }
+          }
+        },
+        {
+          "id": "configuration-2",
+          "kind": "llm",
+          "appearances": 2,
+          "wins": 0,
+          "losses": 2,
+          "comparison_games": 2,
+          "win_rate": 0.0,
+          "win_interval": [
+            0,
+            0.6576197724933469
+          ],
+          "selfplay_appearances": 0,
+          "unfinished": 0,
+          "valid_moves": 29,
+          "submissions": 31,
+          "validity": 0.9354838709677419,
+          "mean_length": 29.5,
+          "length_by_result": {
+            "wins": null,
+            "losses": 29.5
+          },
+          "strength": {
+            "two_ply": {
+              "mean": 64.91571925317785,
+              "scored_moves": 29
+            },
+            "reply_pressure": {
+              "mean": 66.04053631135343,
+              "scored_moves": 29
+            }
+          }
+        },
+        {
+          "id": "configuration-3",
+          "kind": "algorithmic",
+          "appearances": 4,
+          "wins": 4,
+          "losses": 0,
+          "comparison_games": 4,
+          "win_rate": 1.0,
+          "win_interval": [
+            0.5101091635454027,
+            1
+          ],
+          "selfplay_appearances": 0,
+          "unfinished": 0,
+          "valid_moves": 36,
+          "submissions": 36,
+          "validity": 1.0,
+          "mean_length": 17.5,
+          "length_by_result": {
+            "wins": 17.5,
+            "losses": null
+          },
+          "strength": {
+            "two_ply": {
+              "mean": 56.137874192573534,
+              "scored_moves": 36
+            },
+            "reply_pressure": {
+              "mean": 56.98637096021677,
+              "scored_moves": 36
+            }
+          }
+        }
+      ]
+    },
+    {
+      "competition": "model-model",
+      "vocabulary_version": "jmdict-2026-10-13-noun-v2",
+      "games": 4,
+      "finished": 4,
+      "selfplay": 2,
+      "policy_warnings": 0,
+      "entries": [
+        {
+          "id": "configuration-1",
+          "kind": "llm",
+          "appearances": 2,
+          "wins": 0,
+          "losses": 2,
+          "comparison_games": 2,
+          "win_rate": 0.0,
+          "win_interval": [
+            0,
+            0.6576197724933469
+          ],
+          "selfplay_appearances": 0,
+          "unfinished": 0,
+          "valid_moves": 4,
+          "submissions": 6,
+          "validity": 0.6666666666666666,
+          "mean_length": 4.5,
+          "length_by_result": {
+            "wins": null,
+            "losses": 4.5
+          },
+          "strength": {
+            "two_ply": {
+              "mean": 28.906590420709993,
+              "scored_moves": 4
+            },
+            "reply_pressure": {
+              "mean": 31.81240232902296,
+              "scored_moves": 4
+            }
+          }
+        },
+        {
+          "id": "configuration-2",
+          "kind": "llm",
+          "appearances": 6,
+          "wins": 2,
+          "losses": 0,
+          "comparison_games": 2,
+          "win_rate": 1.0,
+          "win_interval": [
+            0.34238022750665303,
+            1
+          ],
+          "selfplay_appearances": 4,
+          "unfinished": 0,
+          "valid_moves": 41,
+          "submissions": 43,
+          "validity": 0.9534883720930233,
+          "mean_length": 13.5,
+          "length_by_result": {
+            "wins": 4.5,
+            "losses": null
+          },
+          "strength": {
+            "two_ply": {
+              "mean": 77.26767105625696,
+              "scored_moves": 41
+            },
+            "reply_pressure": {
+              "mean": 78.72624948068643,
+              "scored_moves": 41
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "research_label": "Archived noun-v2 offline research graph; not the current per-move scoring graph.",
+  "scoring": {
+    "id": "two-ply-log-mass-v1",
+    "gamma": 0.85,
+    "alpha": 1,
+    "threshold": 1,
+    "code_sha256": "d4c02e37ffe6b1cf7c489a9bd63212a95d472d1f6d82d3e6e2617f436c6af4f9",
+    "comparison_pool": "All unused safe dictionary readings with support for the evaluated metric; midrank percentiles with equal weight per alternative.",
+    "label": "Post-hoc scores use one fixed noun-v3/TUBELEX graph for both competitions; historical referee decisions are unchanged.",
+    "provenance": {
+      "vocabulary_sha256": "b3999c81d4ec94ac0022e8177996c587ded9c5008bacd208464d14f97f750488",
+      "frequency_sha256": "6008ae11fa8ef78f841e357d20a5d6f1c7786087cdcd37d315b72dccc3d5c5ea",
+      "dictionary_metadata": {
+        "source_filename": "JMdict_e.gz",
+        "source_sha256": "5a5ad08af6d85c4cf7eac5ac8fd7a053a998f4eb40359ae223c4ee9cdbd7687b",
+        "filter_version": "noun-v3",
+        "common_only": "false"
+      },
+      "eligible_dictionary_readings": 164711,
+      "selected_safe_readings": 7888,
+      "excluded": {
+        "ambiguous": 8230,
+        "unmatched": 104311,
+        "ends_in_n": 24787,
+        "below_threshold_or_zero": 19495
+      },
+      "threshold_per_million": 1.0,
+      "ambiguity_policy": "unambiguous"
+    }
+  },
   "provenance": [
     {
       "file": "results/pilots/20261016T045609Z-b5f7b424/matches.jsonl",
@@ -7516,16 +10447,28 @@
       "sha256": "b8e6eff79c4f1065938d13ba63020ed0c65f20625562a1382403d28704a1e4bd"
     },
     {
-      "file": "results/move-analysis/20261016T082652Z-72ffcedb/analysis.json",
-      "sha256": "bd6495128526df205699eb41b70add58f9027fc6ae16ac9b06d8ab809f2f1224"
+      "file": "results/pilots/20261028T054644Z-00fdf626/matches.jsonl",
+      "sha256": "8637c911984d37de50364c2e077c2c71876ea37ba56b05427699921884fe6126"
     },
     {
-      "file": "results/score-diagnostics/20261016T213913Z-78932215/analysis.json",
-      "sha256": "217596d2c7279a459f4e1f4c09d34598a8ed7db1ba08980d4f66cdd552e121c5"
+      "file": "results/pilots/20261028T060730Z-cffeedd7/matches.jsonl",
+      "sha256": "73edfb119905fe11f59af847a88c6a2a5f4e491e028c047b46a92d4b65c00d3c"
+    },
+    {
+      "file": "results/pilots/20261029T002843Z-1b5afcf7/matches.jsonl",
+      "sha256": "b250b48816d17e469918fdf740397d7672d2418c0a0583a34dc34a76405220bd"
+    },
+    {
+      "file": "web/data/research.json",
+      "sha256": "0e82e3d96eac088f795abfcc0ee7a8caa6c0b0ec465a6d4c6f508f1333a2b035"
     },
     {
       "file": "data/processed/word-frequency.json",
-      "sha256": "28c135efdaead651e6e51cf0e479cc4ad8c946ed3cdb972d0b5596411acc8941"
+      "sha256": "6008ae11fa8ef78f841e357d20a5d6f1c7786087cdcd37d315b72dccc3d5c5ea"
+    },
+    {
+      "file": "data/processed/referee-vocabulary.sqlite",
+      "sha256": "b3999c81d4ec94ac0022e8177996c587ded9c5008bacd208464d14f97f750488"
     }
   ]
 }
