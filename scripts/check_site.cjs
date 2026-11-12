@@ -9,6 +9,7 @@ const assert=require('node:assert/strict');
   await page.goto(process.argv[2] || 'http://127.0.0.1:8856/');
   await page.waitForFunction(()=>document.querySelector('#model-rows')?.innerText.includes('DeepSeek'));
   assert.equal(await page.locator('#load-error').isVisible(),false);
+  assert.equal(await page.locator('[aria-label="Pilot dataset summary"]').count(),0);
   assert.equal(await page.locator('#model-rows tr').count(),2);
   assert.match(await page.locator('#competition-title').innerText(),/MemoryBot/);
   await page.getByRole('button',{name:'Model vs model',exact:true}).click();

@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="intro.css">
   <link rel="stylesheet" href="evaluation.css">
-  <script src="app.js?v=3" defer></script>
+  <script src="app.js?v=4" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -38,12 +38,6 @@
     </section>
     <div class="shell" id="load-error" role="alert" hidden></div>
     <noscript><p class="shell callout">Enable JavaScript to explore the games, or <a href="data/results.json">read the public JSON snapshot</a>.</p></noscript>
-    <section class="stats shell" aria-label="Pilot dataset summary">
-      <div><span class="stat-label">COMPLETED GAMES</span><strong id="stat-games">—</strong><span id="stat-excluded">Competitive outcomes only</span></div>
-      <div><span class="stat-label">MODEL CONFIGURATIONS</span><strong id="stat-models">—</strong><span>For the selected competition</span></div>
-      <div><span class="stat-label">ACCEPTED MOVES</span><strong id="stat-moves">—</strong><span id="stat-validity">Checked by a fixed referee</span></div>
-      <div><span class="stat-label">OPENING KANA</span><strong id="stat-openings" lang="ja">—</strong><span>Small pilot. Not a final ranking.</span></div>
-    </section>
     <div class="view-nav-wrap"><div class="shell view-nav" role="tablist" aria-label="Benchmark views">
       <button class="view-tab active" id="tab-pilot" role="tab" aria-controls="pilot" aria-selected="true" tabindex="0" data-view="pilot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 19V5m0 14h16M8 15v-4m5 4V7m5 8V4"/></svg><span><strong>Results</strong><small>Pilot & model comparisons</small></span></button>
       <button class="view-tab" id="tab-games" role="tab" aria-controls="games" aria-selected="false" tabindex="-1" data-view="games"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="6" cy="7" r="3"/><circle cx="18" cy="17" r="3"/><path d="M6 10v7h9M9 7h9v7"/></svg><span><strong>Explorer</strong><small>Games, word by word</small></span></button>

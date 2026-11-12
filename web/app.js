@@ -12,17 +12,9 @@ const modelFor = id => state.data.models.find(m => m.id === id);
 
 function renderScope() {
   const games=scopedGames(), e=evaluation();
-  const excluded=state.data.excluded.filter(g => g.competition===state.competition && g.vocabulary_version===state.cohort);
-  const turns=games.flatMap(g => g.turns), valid=turns.filter(t => t.outcome==='VALID').length;
   document.querySelectorAll('[data-competition]').forEach(b => {const active=b.dataset.competition===state.competition; b.classList.toggle('active',active); b.setAttribute('aria-pressed',String(active));});
   const versions=[...new Set(state.data.evaluations.filter(e => e.competition===state.competition).map(e => e.vocabulary_version))];
   $('#evaluation-cohort').innerHTML=versions.map(v => `<option ${v===state.cohort?'selected':''}>${escapeHTML(v)}</option>`).join('') || '<option>No recorded games</option>';
-  $('#stat-games').textContent=games.filter(g => !g.unfinished).length;
-  $('#stat-models').textContent=(e?.entries ?? []).filter(row => row.kind==='llm').length;
-  $('#stat-moves').textContent=`${valid} / ${turns.length}`;
-  $('#stat-validity').textContent=`${percent(turns.length ? valid/turns.length : null)} accepted · both players`;
-  $('#stat-excluded').textContent=`${excluded.length} interrupted · ${games.filter(g=>g.unfinished).length} capped`;
-  $('#stat-openings').textContent=[...new Set(games.map(g=>g.opening))].join(' · ') || '—';
   $('#competition-title').textContent=state.competition==='model-bot'?'Models against MemoryBot.':'Models against models.';
   $('#competition-description').textContent=state.competition==='model-bot'?'A fixed baseline opponent. Model performance is reported separately from head-to-head play.':'Head-to-head language-model games, with same-configuration self-play identified separately.';
   $('#competition-note').textContent=`${games.length} recorded games in this view; ${e?.selfplay ?? 0} same-configuration self-play games. ${e?.policy_warnings ? 'Caution: one recorded loss is affected by the old まくら dictionary filter; inspect its flagged transcript. ' : ''}Small, unbalanced pilot—not a controlled model ranking. Different opponents and seeds can change results.`;
@@ -294,12 +286,6 @@ async function initialize() {
     state.data = await response.json();
     if (state.data.schema_version !== 3 || state.data.is_sample_data) throw new Error("Expected a versioned public evaluation snapshot");
     const summary = state.data.summary;
-    $("#stat-games").textContent = summary.completed_games;
-    $("#stat-models").textContent = summary.configurations;
-    $("#stat-moves").textContent = `${summary.valid_moves} / ${summary.submissions}`;
-    $("#stat-validity").textContent = `${percent(summary.validity)} of submissions accepted`;
-    $("#stat-openings").textContent = summary.openings.join(" · ");
-    $("#stat-excluded").textContent = `${summary.excluded_games} infrastructure failure excluded`;
     $("#snapshot-date").textContent = `PILOT / ${new Date(summary.last_match_at).toLocaleDateString("en-GB",{day:"2-digit",month:"short",year:"numeric",timeZone:"UTC"}).toUpperCase()}`;
     $("#failure-summary").innerHTML = Object.entries(state.data.failures).map(([ending,count]) => `<div class="failure-item"><strong>${count}</strong><span>${escapeHTML(failureName(ending))}<small>${ending === "ENDS_IN_N" ? "fatal final kana" : "referee rejection"}</small></span></div>`).join("");
     const params = new URLSearchParams(location.search);
